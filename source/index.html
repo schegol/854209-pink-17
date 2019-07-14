@@ -9,9 +9,9 @@
     <header class="page-header page-header--index">
       <nav class="main-navigation">
         <a class="main-navigation__logo logo logo--header">
-          <img class="logo__image--header" src="http://placehold.it/75x22.jpg/" width="75" height="22" alt="Логотип «Pink»">
+          <img class="logo__image logo__image--header" src="http://placehold.it/75x22.jpg/" width="75" height="22" alt="Логотип «Pink»">
         </a>
-        <button class="main-navigation__toggler" type="button">Открыть меню</button>
+        <button class="main-navigation__toggle" type="button">Открыть меню</button>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list">
             <li class="main-navigation__item main-navigation__item--active">
@@ -89,10 +89,111 @@
         </div>
       </section>
 
+      <section class="reviews">
+        <div class="reviews__wrapper slider slider--reviews">
+          <h2 class="visually-hidden">Отзывы пользователей о приложении</h2>
+          <div class="reviews__list slider__list--reviews">
+            <blockquote class="reviews__item slider__item">
+              <cite class="reviews__author">Николай Петров</cite>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </blockquote>
+          </div>
+          <p class="reviews__toggles slider__toggles">
+            <label class="slider__label" for="first-review">Первая цитата</label>
+            <label class="slider__label" for="second-review">Вторая цитата</label>
+            <label class="slider__label" for="third-review">Третья цитата</label>
+            <input class="slider__toggle" type="radio" name="review-toggle" id="first-review" checked>
+            <input class="slider__toggle" type="radio" name="review-toggle" id="second-review">
+            <input class="slider__toggle" type="radio" name="review-toggle" id="third-review">
+          </p>
+        </div>
+      </section>
+
+      <section class="pricing">
+        <div class="pricing__wrapper slider slider--pricing">
+          <h2 class="visually-hidden">Таблица тарифных планов</h2>
+          <div class="pricing__table-wrapper slider__list slider__list--pricing">
+            <table class="pricing-table">
+              <tbody>
+                <tr>
+                  <th class="pricing-table__heading-cell">
+                    База<br>
+                    <span class="pricing-table__price-span">1,99 USD</span>
+                  </th>
+                  <th class="pricing-table__heading-cell">
+                    Стандарт<br>
+                    <span class="pricing-table__price-span">3,99 USD</span>
+                  </th>
+                  <th class="pricing-table__heading-cell">
+                    Анлим<br>
+                    <span class="pricing-table__price-span">9,99 USD</span>
+                  </th>
+                </tr>
+                <tr>
+                  <td>Розовый фильтр</td>
+                  <td>Розовый фильтр</td>
+                  <td>Розовый фильтр</td>
+                </tr>
+                <tr>
+                  <td>Смайлики</td>
+                  <td>Смайлики</td>
+                  <td>Смайлики</td>
+                </tr>
+                <tr>
+                  <td>Комментарии</td>
+                  <td>Комментарии</td>
+                  <td>Комментарии</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="reviews__toggles slider__toggles">
+            <label class="slider__label" for="first-column">Тариф «База»</label>
+            <label class="slider__label" for="second-column">Тариф «Стандарт»</label>
+            <label class="slider__label" for="third-column">Тариф «Анлим»</label>
+            <input class="slider__toggle" type="radio" name="table-toggle" id="first-column" checked>
+            <input class="slider__toggle" type="radio" name="table-toggle" id="second-column">
+            <input class="slider__toggle" type="radio" name="table-toggle" id="third-column">
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer page-footer--index">
-
+      <section class="footer-contacts">
+        <div class="footer-contacts__wrapper">
+          <h2 class="footer-contacts__heading">Остались вопросы?<br>Свяжитесь с нами!</h2>
+          <ul class="footer-contacts__contact-list">
+            <li class="footer-contacts__contact-item">
+              <span class="footer-contacts__contact-title">
+                Звоните:
+              </span>
+              <a class="footer-contacts__contact-info" href="tel:+78125556666">
+                +7 (812) 555-66-66
+              </a>
+            </li>
+            <li class="footer-contacts__contact-item">
+              <span class="footer-contacts__contact-title">
+                Пишите:
+              </span>
+              <a class="footer-contacts__contact-info" href="mailto:mail@htmlacademy.ru">
+                mail@htmlacademy.ru
+              </a>
+            </li>
+            <li class="footer-contacts__contact-item">
+              <span class="footer-contacts__contact-title">
+                Приезжайте в гости:
+              </span>
+              <span class="footer-contacts__contact-info">
+                ул. Большая Конюшенная, 19/8
+              </span>
+            </li>
+          </ul>
+          <div class="footer-contacts__map-container">
+            <img class="footer-contacts__map-image" src="https://placehold.it/320x200.jpg/" alt="ул. Большая Конюшенная, 19/8" width="320" height="200">
+          </div>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
