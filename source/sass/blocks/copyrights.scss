@@ -1,0 +1,43 @@
+.copyrights {
+  padding-top: 40px;
+  padding-bottom: 50px;
+
+  &__wrapper {
+    @include d-flex (nowrap, column, space-between, center);
+    min-height: 195px;
+  }
+
+  &__social-list {
+    @include list-reset;
+    @include d-flex (wrap, row, space-between, flex-start);
+    width: 175px;
+  }
+
+  &__social-link {
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 45px;
+
+    border: 3px solid #e9ebec;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      border-color: #283645;
+    }
+
+    &:active {
+      // border-color: #283645;
+      // opacity: 0.1;
+    }
+  }
+
+  &__link-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+}

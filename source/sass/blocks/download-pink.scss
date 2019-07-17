@@ -1,0 +1,55 @@
+.download-pink {
+
+  &__wrapper {
+    min-height: 210px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    @include d-flex(nowrap, column, flex-start, center);
+  }
+
+  &__general-link {
+    width: 280px;
+    margin-bottom: 32px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    color: #fff;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    text-align: center;
+
+    border: 3px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+
+  &__links-list {
+    width: 205px;
+    @include list-reset;
+    margin-bottom: 25px;
+    @include d-flex(nowrap, row, space-between, center);
+  }
+
+  &__links-item {
+    @include reset;
+  }
+
+  &__links-link {
+    @include reset;
+  }
+
+  &__links-image {
+    @include reset;
+    display: block;
+  }
+
+  &__description {
+    max-width: 240px;
+    @include reset;
+    color: #fff;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: center;
+  }
+}
