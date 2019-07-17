@@ -1,0 +1,43 @@
+.pricing-table {
+  position: relative;
+  top: 82px;
+  left: 50%;
+
+  border-collapse: collapse;
+
+  transform: translateX(-50%);
+}
+
+.pricing-table__heading-cell {
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: $extra-color;
+  border-right: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
+}
+
+.pricing-table__price-span {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.pricing-table__cell {
+  min-width: 250px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 21px;
+
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border-right: 2px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
+}

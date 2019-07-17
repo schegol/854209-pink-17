@@ -13,11 +13,11 @@
   }
 }
 
-.popup__content {
+.popup-alert__content {
   text-align: center;
 }
 
-.popup__heading {
+.popup-alert__heading {
   @include reset;
 
   margin-bottom: 30px;
@@ -27,7 +27,7 @@
   color: #000000;
 }
 
-.popup__message {
+.popup-alert__message {
   @include reset;
 
   padding-right: 20px;
@@ -44,7 +44,7 @@
   }
 }
 
-.popup__button-wrapper {
+.popup-alert__button-wrapper {
   @include d-flex (nowrap, column, center, center);
 
   min-height: 163px;
@@ -52,7 +52,7 @@
   background-color: #f2f2f2;
 }
 
-.popup__button {
+.popup-alert__button {
   @include reset;
 
   width: 280px;

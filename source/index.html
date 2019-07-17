@@ -107,9 +107,9 @@
             <label class="slider__label" for="first-review">Первая цитата</label>
             <label class="slider__label" for="second-review">Вторая цитата</label>
             <label class="slider__label" for="third-review">Третья цитата</label>
-            <input class="slider__toggle" type="radio" name="review-toggle" id="first-review" checked>
-            <input class="slider__toggle" type="radio" name="review-toggle" id="second-review">
-            <input class="slider__toggle" type="radio" name="review-toggle" id="third-review">
+            <input class="slider__toggle hidden-input" type="radio" name="review-toggle" id="first-review" checked>
+            <input class="slider__toggle hidden-input" type="radio" name="review-toggle" id="second-review">
+            <input class="slider__toggle hidden-input" type="radio" name="review-toggle" id="third-review">
           </p>
         </div>
       </section>
@@ -135,19 +135,19 @@
                   </th>
                 </tr>
                 <tr>
-                  <td>Розовый фильтр</td>
-                  <td>Розовый фильтр</td>
-                  <td>Розовый фильтр</td>
+                  <td class="pricing-table__cell">Розовый фильтр</td>
+                  <td class="pricing-table__cell">Розовый фильтр</td>
+                  <td class="pricing-table__cell">Розовый фильтр</td>
                 </tr>
                 <tr>
-                  <td>Смайлики</td>
-                  <td>Смайлики</td>
-                  <td>Смайлики</td>
+                  <td class="pricing-table__cell">Смайлики</td>
+                  <td class="pricing-table__cell">Смайлики</td>
+                  <td class="pricing-table__cell">Смайлики</td>
                 </tr>
                 <tr>
-                  <td>Комментарии</td>
-                  <td>Комментарии</td>
-                  <td>Комментарии</td>
+                  <td class="pricing-table__cell">Комментарии</td>
+                  <td class="pricing-table__cell">Комментарии</td>
+                  <td class="pricing-table__cell">Комментарии</td>
                 </tr>
               </tbody>
             </table>
@@ -156,9 +156,9 @@
             <label class="slider__label" for="first-column">Тариф «База»</label>
             <label class="slider__label" for="second-column">Тариф «Стандарт»</label>
             <label class="slider__label" for="third-column">Тариф «Анлим»</label>
-            <input class="slider__toggle" type="radio" name="table-toggle" id="first-column" checked>
-            <input class="slider__toggle" type="radio" name="table-toggle" id="second-column">
-            <input class="slider__toggle" type="radio" name="table-toggle" id="third-column">
+            <input class="slider__toggle hidden-input" type="radio" name="table-toggle" id="first-column">
+            <input class="slider__toggle hidden-input" type="radio" name="table-toggle" id="second-column" checked>
+            <input class="slider__toggle hidden-input" type="radio" name="table-toggle" id="third-column">
           </p>
         </div>
       </section>
@@ -166,7 +166,7 @@
 
     <footer class="page-footer page-footer--index container">
       <section class="footer-contacts">
-        <div class="footer-contacts__wrapper">
+        <div class="footer-contacts__wrapper wrapper">
           <h2 class="footer-contacts__heading">Остались вопросы?<br>Свяжитесь с нами!</h2>
           <ul class="footer-contacts__contact-list">
             <li class="footer-contacts__contact-item">
@@ -194,9 +194,8 @@
               </span>
             </li>
           </ul>
-          <div class="footer-contacts__map-container">
-            <img class="footer-contacts__map-image" src="https://placehold.it/320x200.jpg/" alt="ул. Большая Конюшенная, 19/8" width="320" height="200">
-          </div>
+        </div>
+        <div class="footer-contacts__map-container">
         </div>
       </section>
     </footer>
