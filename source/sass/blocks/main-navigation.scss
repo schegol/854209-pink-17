@@ -1,0 +1,36 @@
+.main-navigation {
+  @include reset;
+
+  background-color: $extra-color;
+}
+
+.main-navigation__top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 20px 25px;
+
+  border-bottom: 1px solid #000000;
+}
+
+.main-navigation__list {
+  @include list-reset;
+}
+
+.main-navigation__item {
+  text-align: center;
+
+  border-top: 1px solid #4a5662;
+  border-bottom: 1px solid #010101;
+}
+
+.main-navigation__link {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
