@@ -1,16 +1,17 @@
 .developer {
   position: relative;
+
   width: 128px;
+}
 
-  &__name {
-    padding-right: 42px;
+.developer__name {
+  padding-right: 42px;
 
-    color: #283645;
-  }
+  color: $extra-color;
+}
 
-  &__image {
-    position: absolute;
-    top: -7px;
-    right: -8px;
-  }
+.developer__image {
+  position: absolute;
+  top: -7px;
+  right: -8px;
 }

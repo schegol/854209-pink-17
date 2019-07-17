@@ -1,36 +1,35 @@
-.page-header {
+.page-header__heading-section {
+  @include reset;
 
-  &__heading-section {
-    background-color: #1d2631;
-    @include reset;
-  }
+  background-color: #1d2631;
+}
 
-  &__heading-wrapper {
-    min-height: 170px;
+.page-header__heading-wrapper {
+  min-height: 170px;
 
-    background-image: url(../img/bg-back-mobile@1x.jpg);
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--index {
+    min-height: 395px;
+
+    background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-
-    &--index {
-      min-height: 395px;
-
-      background-image: url(../img/iphone-hand-mobile@1x.png), url(../img/bg-back-mobile@1x.jpg);
-      background-repeat: no-repeat;
-      background-position: left bottom, center;
-    }
+    background-position: left bottom, center;
   }
+}
 
-  &__heading {
-    @include reset;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 30px;
+.page-header__heading {
+  @include reset;
 
-    color: #fff;
-    font-weight: 300;
-    line-height: normal;
-    font-size: 24px;
-    text-align: center;
-  }
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: normal;
+  text-align: center;
+  color: #ffffff;
 }

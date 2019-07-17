@@ -1,17 +1,14 @@
-.gallery {
+.gallery__heading-wrapper {
+  text-align: center;
+}
 
+.gallery__heading {
+  @include reset;
 
-  &__heading-wrapper {
-    text-align: center;
-  }
+  padding-top: 45px;
+  padding-bottom: 50px;
 
-  &__heading {
-    @include reset;
-    padding-top: 45px;
-    padding-bottom: 50px;
-
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 30px;
-  }
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
 }

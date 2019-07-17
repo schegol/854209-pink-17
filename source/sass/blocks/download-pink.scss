@@ -1,55 +1,57 @@
-.download-pink {
+.download-pink__wrapper {
+  @include d-flex(nowrap, column, flex-start, center);
 
-  &__wrapper {
-    min-height: 210px;
-    margin-top: 30px;
-    padding-bottom: 30px;
-    @include d-flex(nowrap, column, flex-start, center);
-  }
+  min-height: 210px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
 
-  &__general-link {
-    width: 280px;
-    margin-bottom: 32px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+.download-pink__general-link {
+  box-sizing: border-box;
+  width: 280px;
+  margin-bottom: 32px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
-    color: #fff;
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 700;
-    text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
 
-    border: 3px solid #fff;
-    border-radius: 50px;
-    box-sizing: border-box;
-  }
+  border: 3px solid #ffffff;
+  border-radius: 50px;
+}
 
-  &__links-list {
-    width: 205px;
-    @include list-reset;
-    margin-bottom: 25px;
-    @include d-flex(nowrap, row, space-between, center);
-  }
+.download-pink__links-list {
+  @include d-flex(nowrap, row, space-between, center);
+  @include list-reset;
 
-  &__links-item {
-    @include reset;
-  }
+  width: 205px;
+  margin-bottom: 25px;
+}
 
-  &__links-link {
-    @include reset;
-  }
+.download-pink__links-item {
+  @include reset;
+}
 
-  &__links-image {
-    @include reset;
-    display: block;
-  }
+.download-pink__links-link {
+  @include reset;
+}
 
-  &__description {
-    max-width: 240px;
-    @include reset;
-    color: #fff;
-    line-height: 24px;
-    font-weight: 300;
-    text-align: center;
-  }
+.download-pink__links-image {
+  @include reset;
+
+  display: block;
+}
+
+.download-pink__description {
+  @include reset;
+
+  max-width: 240px;
+
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
 }
