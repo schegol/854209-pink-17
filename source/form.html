@@ -41,57 +41,67 @@
 
     <main class="page-main">
       <section class="contest container">
-        <div class="contest__wrapper wrapper">
-          <div class="contest__heading-wrapper">
+        <div class="contest__wrapper">
+          <div class="contest__heading-wrapper wrapper">
             <h2 class="contest__heading">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="contest__heading--hidden">Пожалуйста, заполните форму ниже:</span></h2>
           </div>
           <form class="contest-form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="contest-form__fieldset">
+            <fieldset class="contest-form__fieldset wrapper">
               <legend class="visually-hidden">Пожалуйста, представьтесь</legend>
-              <label class="contest-form__label" for="name">Фамилия</label>
-              <input class="contest-form__input" type="text" name="name" id="name" placeholder="Укажите фамилию *">
-              <label class="contest-form__label" for="surname">Имя</label>
-              <input class="" type="text" name="surname" id="surname" placeholder="Введите ваше имя *">
-              <label class="contest-form__label" for="patronymic">Отчество</label>
-              <input class="contest-form__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+              <label class="contest-form__label" for="name">Фамилия:</label>
+              <input class="contest-form__input contest-form__input--text" type="text" name="name" id="name" placeholder="Укажите фамилию *">
+              <label class="contest-form__label" for="surname">Имя:</label>
+              <input class="contest-form__input contest-form__input--text" type="text" name="surname" id="surname" placeholder="Введите ваше имя *">
+              <label class="contest-form__label" for="patronymic">Отчество:</label>
+              <input class="contest-form__input contest-form__input--text" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
             </fieldset>
-            <fieldset class="contest-form__fieldset contest-form__fieldset--gray">
-              <legend class="contest-form__fieldset-title">Ваши безбашенные достижения в путешествии</legend>
-              <label class="contest-form__label" for="shark-selfie">Сделал селфи с акулой</label>
-              <input class="contest-form__input" type="checkbox" value="shark-selfie" name="achievment-checkbox" id="shark-selfie" checked>
-              <label class="contest-form__label" for="beach-burn">Обгорел на пляже</label>
-              <input class="contest-form__input" type="checkbox" value="beach-burn" name="achievment-checkbox" id="beach-burn" checked>
-              <label class="contest-form__label" for="chuck-norris">Видел Чака Норриса</label>
-              <input class="contest-form__input" type="checkbox" value="chuck-norris" name="achievment-checkbox" id="chuck-norris">
-              <label class="contest-form__label" for="souvenir-purchase">Накупил сувениров</label>
-              <input class="contest-form__input" type="checkbox" value="souvenir-purchase" name="achievment-checkbox" id="souvenir-purchase">
-              <label class="contest-form__label" for="tower-hold">Удержал башню</label>
-              <input class="contest-form__input" type="checkbox" value="tower-hold" name="achievment-checkbox" id="tower-hold" checked>
-              <label class="contest-form__label" for="hotel-destruction">Разгромил отель</label>
-              <input class="contest-form__input" type="checkbox" value="hotel-destruction" name="achievment-checkbox" id="hotel-destruction">
-            </fieldset>
-            <fieldset class="contest-form__fieldset">
+            <div class="contest-form__fieldset-wrapper wrapper">
+              <fieldset class="contest-form__fieldset">
+                <legend class="contest-form__fieldset-title">Ваши безбашенные достижения в путешествии</legend>
+                <div class="contest-form__input-wrapper">
+                  <label class="contest-form__label contest-form__label--achievments" for="shark-selfie">Сделал селфи с акулой</label>
+                  <input class="contest-form__input hidden-input" type="checkbox" value="shark-selfie" name="achievment-checkbox" id="shark-selfie" checked>
+                  <label class="contest-form__label contest-form__label--achievments" for="beach-burn">Обгорел на пляже</label>
+                  <input class="contest-form__input hidden-input" type="checkbox" value="beach-burn" name="achievment-checkbox" id="beach-burn" checked>
+                  <label class="contest-form__label contest-form__label--achievments" for="chuck-norris">Видел Чака Норриса</label>
+                  <input class="contest-form__input hidden-input" type="checkbox" value="chuck-norris" name="achievment-checkbox" id="chuck-norris">
+                  <label class="contest-form__label contest-form__label--achievments" for="souvenir-purchase">Накупил сувениров</label>
+                  <input class="contest-form__input hidden-input" type="checkbox" value="souvenir-purchase" name="achievment-checkbox" id="souvenir-purchase">
+                  <label class="contest-form__label contest-form__label--achievments" for="tower-hold">Удержал башню</label>
+                  <input class="contest-form__input hidden-input" type="checkbox" value="tower-hold" name="achievment-checkbox" id="tower-hold" checked>
+                  <label class="contest-form__label contest-form__label--achievments" for="hotel-destruction">Разгромил отель</label>
+                  <input class="contest-form__input hidden-input" type="checkbox" value="hotel-destruction" name="achievment-checkbox" id="hotel-destruction">
+                </div>
+              </fieldset>
+            </div>
+            <fieldset class="contest-form__fieldset wrapper">
               <legend class="visually-hidden">Укажите ваши контактные данные</legend>
               <label class="contest-form__label" for="phone">Номер телефона</label>
-              <input class="contest-form__input" type="text" name="phone" id="phone" placeholder="Номер, пожалуйста">
-              <label class="contest-form__label" for="email">Фамилия</label>
-              <input class="contest-form__input" type="email" name="email" id="email" placeholder="Введите почту *">
+              <input class="contest-form__input contest-form__input--text" type="text" name="phone" id="phone" placeholder="Номер, пожалуйста">
+              <label class="contest-form__label" for="email">Адрес почты</label>
+              <input class="contest-form__input contest-form__input--text" type="email" name="email" id="email" placeholder="Введите почту *">
             </fieldset>
-            <fieldset class="contest-form__fieldset contest-form__fieldset--gray">
-              <legend class="contest-form__fieldset-title">С каким приложением путешествовали?</legend>
-              <label class="contest-form__label" for="ios">Pink для iOS</label>
-              <input class="contest-form__input" type="radio" name="operating-system" id="ios" checked>
-              <label class="contest-form__label" for="android">Pink на Android</label>
-              <input class="contest-form__input" type="radio" name="operating-system" id="android">
-              <label class="contest-form__label" for="windows">Windows Phone</label>
-              <input class="contest-form__input" type="radio" name="operating-system" id="windows">
-            </fieldset>
-            <fieldset class="contest-form__fieldset">
-              <legend class="contest-form__fieldset-title">Опишите свои эмоции</legend>
-              <textarea name="comment" id="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-            </fieldset>
-            <button class="contest-form__submit" type="submit">Отправить форму</button>
-            <small class="contest-form__note"><sup>*</sup>—обязательные поля</small>
+            <div class="contest-form__fieldset-wrapper wrapper">
+              <fieldset class="contest-form__fieldset">
+                <legend class="contest-form__fieldset-title">С каким приложением путешествовали?</legend>
+                <div class="contest-form__input-wrapper">
+                  <label class="contest-form__label contest-form__label--operating-system" for="ios">Pink для iOS</label>
+                  <input class="contest-form__input hidden-input" type="radio" name="operating-system" id="ios" value="ios" checked>
+                  <label class="contest-form__label contest-form__label--operating-system" for="android">Pink на Android</label>
+                  <input class="contest-form__input hidden-input" type="radio" name="operating-system" id="android" value="android">
+                  <label class="contest-form__label contest-form__label--operating-system" for="windows">Windows Phone</label>
+                  <input class="contest-form__input hidden-input" type="radio" name="operating-system" id="windows" value="windows">
+                </div>
+              </fieldset>
+            </div>
+            <div class="contest-form__comment-wrapper wrapper">
+              <label class="contest-form__label contest-form__label--textarea" for="comment">Опишите свои эмоции</label>
+              <textarea class="contest-form__input contest-form__input--textarea" name="comment" id="comment" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </div>
+            <button class="contest-form__submit button" type="submit">Отправить форму</button>
+            <div class="contest-form__note-wrapper">
+              <small class="contest-form__note"><sup class="contest-form__note--star">*</sup> — обязательные поля</small>
+            </div>
           </form>
         </div>
       </section>
@@ -107,7 +117,7 @@
           <ul class="copyrights__social-list">
             <li class="copyrights__social-item">
               <a class="copyrights__social-link" href="https://twitter.com/" target="_blank">
-                <svg class="copyrights__link-image" version="1.0" id="Layer_1" width="18" height="14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+                <svg class="copyrights__link-image" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
                   <g id="W6EeEF_1_">
                     <g>
                       <path fill-rule="evenodd" clip-rule="evenodd" fill="#d22856" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
@@ -118,14 +128,14 @@
             </li>
             <li class="copyrights__social-item">
               <a class="copyrights__social-link" href="https://facebook.com/" target="_blank">
-                <svg class="copyrights__link-image" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
+                <svg class="copyrights__link-image" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
                   <path fill="#d22856" d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
                 </svg>
               </a>
             </li>
             <li class="copyrights__social-item">
               <a class="copyrights__social-link" href="https://youtube.com/" target="_blank">
-                <svg class="copyrights__link-image" version="1.0" id="Layer_1" width="15" height="13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
+                <svg class="copyrights__link-image" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
                   <path fill="#d22856" d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
                 </svg>
               </a>

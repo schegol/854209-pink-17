@@ -1,0 +1,51 @@
+.footer-contacts__wrapper {
+  padding-top: 20px;
+  padding-bottom: 15px;
+
+  text-align: center;
+}
+
+.footer-contacts__heading {
+  margin-bottom: 25px;
+
+  font-weight: 300;
+  font-size: 24px;
+  line-height: normal;
+  color: $extra-color;
+}
+
+.footer-contacts__contact-list {
+  @include list-reset;
+}
+
+.footer-contacts__contact-item {
+  @include d-flex (nowrap, column, flex-start, center);
+
+  margin-bottom: 20px;
+}
+
+.footer-contacts__contact-title {
+  margin-bottom: 2px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: normal;
+  color: $extra-color;
+}
+
+.footer-contacts__contact-info {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: normal;
+  color: $main-color;
+  text-decoration: none;
+}
+
+.footer-contacts__map-container {
+  min-height: 200px;
+
+  background-image: url("../img/bg-triangle-white-footer.svg"), url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100%, 103%;
+  background-position: center top, bottom;
+}

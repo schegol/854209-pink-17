@@ -1,0 +1,27 @@
+.reviews {
+  padding-top: 45px;
+}
+
+.reviews__wrapper {
+  padding-bottom: 5px;
+}
+
+.reviews__item {
+  @include reset;
+
+  text-align: center;
+}
+
+.reviews__author {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.reviews__text {
+  @include reset;
+
+  margin-top: 12px;
+}

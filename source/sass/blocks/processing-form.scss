@@ -1,0 +1,63 @@
+.processing-form__fieldset {
+  border: none;
+}
+
+.processing-form__buttons-wrapper {
+  @include d-flex (nowrap, column, flex-start, center);
+
+  padding-top: 38px;
+  padding-bottom: 30px;
+
+  border-top: 1px solid #dddfe0;
+}
+
+.processing-form__button {
+  box-sizing: border-box;
+  width: 280px;
+  margin-bottom: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  border: 3px solid;
+  border-radius: 50px;
+
+  &--submit {
+    color: $main-color;
+
+    border-color: $main-color;
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+
+      background-color: $main-color;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &--reset {
+    color: $extra-color;
+
+    border-color: $extra-color;
+    opacity: 0.1;
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+
+      background-color: $extra-color;
+      opacity: 0.3;
+    }
+  }
+}
