@@ -1,17 +1,24 @@
 .developer {
-  position: relative;
+  @include d-flex (nowrap, row, space-between, center);
 
-  width: 128px;
+  width: 130px;
 }
 
 .developer__name {
-  padding-right: 42px;
-
   color: $extra-color;
 }
 
 .developer__image {
-  position: absolute;
-  top: -7px;
-  right: -8px;
+  position: relative;
+  top: 4px;
+}
+
+@media (min-width: $desktop-width) {
+  .developer {
+    width: 150px;
+  }
+
+  .developer__name {
+    font-size: 18px;
+  }
 }

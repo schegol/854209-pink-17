@@ -3,8 +3,9 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
-@import "blocks/button.scss";
+@import "blocks/wrapper.scss";
 @import "blocks/container.scss";
+@import "blocks/button.scss";
 @import "blocks/contest.scss";
 @import "blocks/contest-form.scss";
 @import "blocks/copyrights.scss";
@@ -23,8 +24,8 @@
 @import "blocks/pricing-table.scss";
 @import "blocks/processing-area.scss";
 @import "blocks/processing-form.scss";
+@import "blocks/research.scss";
 @import "blocks/reviews.scss";
 @import "blocks/slider.scss";
 @import "blocks/user-post.scss";
 @import "blocks/web-app.scss";
-@import "blocks/wrapper.scss";

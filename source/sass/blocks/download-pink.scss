@@ -1,9 +1,38 @@
 .download-pink__wrapper {
   @include d-flex(nowrap, column, flex-start, center);
 
+  position: relative;
+
+  max-width: 280px;
   min-height: 210px;
-  margin-top: 30px;
+  margin: 0 auto;
+  padding-top: 425px;
   padding-bottom: 30px;
+
+  &::after {
+    @include abs-pseudo;
+
+    bottom: 274px;
+    left: 50%;
+
+    width: 256px;
+    height: 286px;
+
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transform: translateX(-50%);
+  }
+}
+
+.download-pink__slogan {
+  display: none;
+
+  font-weight: 300;
+  font-size: 40px;
+  line-height: normal;
+  text-align: center;
+  color: #ffffff;
 }
 
 .download-pink__general-link {
@@ -21,6 +50,17 @@
 
   border: 3px solid #ffffff;
   border-radius: 50px;
+
+  &:hover,
+  &:focus {
+    color: $main-color;
+
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba($main-color, 0.3);
+  }
 }
 
 .download-pink__links-list {
@@ -54,4 +94,73 @@
   line-height: 24px;
   text-align: center;
   color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .download-pink__container {
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: -20px bottom;
+  }
+
+  .download-pink__wrapper {
+    max-width: 300px;
+    margin: 0;
+    padding: 100px 0 110px 20px;
+
+    &::after {
+      width: 0;
+      height: 0;
+
+      background: none;
+    }
+  }
+
+  .download-pink__slogan {
+    display: block;
+    width: 215px;
+    margin-bottom: 30px;
+  }
+
+  .download-pink__general-link {
+    width: 300px;
+    margin-bottom: 45px;
+  }
+
+  .download-pink__links-list {
+    margin-bottom: 40px;
+  }
+
+  .download-pink__description {
+    max-width: 300px;
+
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .download-pink__container {
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-position: 25px bottom;
+  }
+
+  .download-pink__wrapper {
+    padding: 115px 0 120px 10px;
+  }
+
+  .download-pink__slogan {
+    display: block;
+    width: 250px;
+    margin-bottom: 50px;
+
+    font-size: 50px;
+  }
+
+  .download-pink__general-link {
+    margin-bottom: 65px;
+  }
+
+  .download-pink__links-list {
+    margin-bottom: 60px;
+  }
 }
