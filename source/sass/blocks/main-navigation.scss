@@ -40,12 +40,12 @@
   color: #ffffff;
   text-transform: uppercase;
 
-  &:hover,
-  &:focus {
+  &:not(&--active):hover,
+  &:not(&--active):focus {
     color: $main-color;
   }
 
-  &:active {
+  &:not(&--active):active {
     color: rgba($main-color, 0.3);
   }
 }
@@ -90,10 +90,6 @@
 
   .main-navigation__item {
     border: none;
-
-    &--active {
-      border-bottom: 2px solid #ffffff;
-    }
   }
 
   .main-navigation__link {
@@ -104,7 +100,11 @@
     line-height: 18px;
     text-transform: none;
 
-    &:active {
+    &--active {
+      border-bottom: 2px solid #ffffff;
+    }
+
+    &:not(&--active):active {
       color: rgba(255, 255, 255, 0.3);
     }
   }
