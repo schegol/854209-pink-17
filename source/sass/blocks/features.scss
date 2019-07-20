@@ -1,21 +1,29 @@
 .features__heading {
-  @include d-flex (nowrap, column, space-between, center);
   @include reset;
+  @include d-flex (nowrap, column, space-between, center);
 
   padding-top: 40px;
   padding-bottom: 40px;
 
   font-weight: 300;
   font-size: 24px;
+  line-height: normal;
   text-align: center;
 }
 
 .features__heading-line {
   @include reset;
 
-  &:first-child {
-    margin-bottom: 25px;
+  &:last-child {
+    margin-top: 25px;
   }
+}
+
+.features__info {
+  background-color: #f2f2f2;
+  background-image: url("../img/bg-triangle-white.svg"), url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center top, center bottom -40px;
 }
 
 .features__list {
@@ -25,11 +33,6 @@
   padding-bottom: 290px;
 
   text-align: center;
-
-  background-color: #f2f2f2;
-  background-image: url("../img/bg-triangle-white.svg"), url("../img/iphone-screen-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: center top -34px, center bottom -40px;
 }
 
 .features__item {
@@ -54,4 +57,79 @@
   margin-bottom: 30px;
 
   line-height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .features__heading {
+    padding-top: 50px;
+    padding-bottom: 45px;
+
+    font-size: 40px;
+  }
+
+  .features__heading-line {
+    &:last-child {
+      margin-top: 0;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  .features__list {
+    @include d-flex (nowrap, column, flex-start, flex-start);
+
+    padding-top: 75px;
+    padding-bottom: 45px;
+    padding-left: 330px;
+
+    text-align: left;
+  }
+
+  .features__item {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__heading {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    font-size: 50px;
+  }
+
+  .features__heading-line {
+    &:last-child {
+      margin-top: 0;
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+  }
+
+  .features__list {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 355px 10px 70px 10px;
+
+    text-align: center;
+  }
+
+  .features__item {
+    width: 300px;
+  }
+
+  .features__item-heading {
+    margin-bottom: 30px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .features__item-description {
+    padding-right: 25px;
+    padding-left: 25px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

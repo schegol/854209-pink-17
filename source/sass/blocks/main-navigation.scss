@@ -1,5 +1,6 @@
 .main-navigation {
   @include reset;
+  @include d-flex (nowrap, column, flex-start, stretch);
 
   background-color: $extra-color;
 }
@@ -7,13 +8,14 @@
 .main-navigation__top-bar {
   display: flex;
   justify-content: space-between;
-  padding: 22px 20px 25px;
-
-  border-bottom: 1px solid #000000;
+  padding: 22px 20px 25px 20px;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .main-navigation__list {
   @include list-reset;
+  @include d-flex (nowrap, column, flex-start, stretch);
 }
 
 .main-navigation__item {
@@ -21,6 +23,10 @@
 
   border-top: 1px solid #4a5662;
   border-bottom: 1px solid #010101;
+
+  &:first-of-type {
+    box-shadow: 0 -1px 0 #000000;
+  }
 }
 
 .main-navigation__link {
@@ -28,9 +34,78 @@
   padding-top: 15px;
   padding-bottom: 15px;
 
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   color: #ffffff;
   text-transform: uppercase;
+
+  &:not(&--active):hover,
+  &:not(&--active):focus {
+    color: $main-color;
+  }
+
+  &:not(&--active):active {
+    color: rgba($main-color, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation__top-bar {
+    width: 620px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation__wrapper {
+    @include d-flex (nowrap, row, space-between, center);
+
+    width: 940px;
+    margin: 0 auto;
+    padding: 27px 10px 43px 10px;
+  }
+
+
+  .main-navigation__top-bar {
+    @include reset;
+
+    width: auto;
+
+    border: none;
+  }
+
+  .main-navigation__item:first-of-type {
+    box-shadow: none;
+  }
+
+  .main-navigation__list {
+    @include d-flex (wrap, row, space-between, stretch);
+
+    width: 620px;
+  }
+
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation__item {
+    border: none;
+  }
+
+  .main-navigation__link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: none;
+
+    &--active {
+      border-bottom: 2px solid #ffffff;
+    }
+
+    &:not(&--active):active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
 }

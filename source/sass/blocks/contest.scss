@@ -34,28 +34,27 @@
   color: $main-color;
   text-transform: uppercase;
 
-  &--achievments {
-    margin-bottom: 52px;
+  &--relative {
     padding-left: 70px;
 
     font-size: 18px;
     line-height: 30px;
     color: $extra-color;
     text-transform: none;
+
+    cursor: pointer;
+  }
+
+  &--checkbox {
+    margin-bottom: 52px;
 
     &:last-of-type {
       margin-bottom: 42px;
     }
   }
 
-  &--operating-system {
+  &--radio {
     margin-bottom: 45px;
-    padding-left: 70px;
-
-    font-size: 18px;
-    line-height: 30px;
-    color: $extra-color;
-    text-transform: none;
   }
 
   &--textarea {

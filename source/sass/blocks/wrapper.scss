@@ -2,3 +2,10 @@
   padding-right: 20px;
   padding-left: 20px;
 }
+
+@media (min-width: $desktop-width) {
+  .wrapper {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

@@ -12,3 +12,9 @@
   font-size: 14px;
   line-height: 30px;
 }
+
+@media (min-width: $tablet-width) {
+  .gallery__usual-posts {
+    @include d-flex (wrap, row, flex-start, shrink);
+  }
+}
