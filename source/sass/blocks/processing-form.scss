@@ -61,3 +61,30 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .processing-form {
+    max-width: 275px;
+    padding-right: 20px;
+  }
+
+  .processing-form__button {
+    max-width: 260px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .processing-form {
+    max-width: 410px;
+    padding-right: 60px;
+  }
+
+  .processing-form__buttons-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .processing-form__button {
+    max-width: 183px;
+  }
+}

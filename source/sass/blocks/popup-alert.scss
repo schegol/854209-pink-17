@@ -47,9 +47,16 @@
 .popup-alert__button-wrapper {
   @include d-flex (nowrap, column, center, center);
 
+  width: 100%;
   min-height: 163px;
 
   background-color: #f2f2f2;
+
+  &--error {
+    min-height: 0;
+
+    background-color: #ffffff;
+  }
 }
 
 .popup-alert__button {
@@ -83,5 +90,41 @@
 
   &:disabled {
     background-color: #e5e5e5;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .popup-alert--error {
+    width: 460px;
+    min-height: 363px;
+  }
+
+  .popup-alert--success {
+    width: 460px;
+    min-height: 431px;
+  }
+
+  .popup-alert__content {
+    @include d-flex (nowrap, column, space-between, center);
+  }
+
+  .popup-alert__heading {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup-alert__message {
+    font-size: 18px;
+  }
+
+  .popup-alert__button {
+    width: 300px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .popup-alert {
+    width: 780px;
+    min-height: 377px;
   }
 }

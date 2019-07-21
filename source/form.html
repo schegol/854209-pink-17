@@ -48,19 +48,25 @@
             <h2 class="contest__heading">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="contest__heading contest__heading--hidden">Пожалуйста, заполните форму ниже:</span></h2>
           </div>
           <form class="contest-form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="contest-form__fieldset wrapper">
+            <fieldset class="contest-form__fieldset contest-form__name-area wrapper">
               <legend class="visually-hidden">Пожалуйста, представьтесь</legend>
-              <label class="contest-form__label" for="name">Фамилия:</label>
-              <input class="contest-form__input contest-form__input--text" type="text" name="name" id="name" placeholder="Укажите фамилию *" required>
-              <label class="contest-form__label" for="surname">Имя:</label>
-              <input class="contest-form__input contest-form__input--text" type="text" name="surname" id="surname" placeholder="Введите ваше имя *" required>
-              <label class="contest-form__label" for="patronymic">Отчество:</label>
-              <input class="contest-form__input contest-form__input--text" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+              <label class="contest-form__label contest-form__label--flexible" for="name">
+                Фамилия:
+                <input class="contest-form__input contest-form__input--text contest-form__input--name" type="text" name="name" id="name" placeholder="Укажите фамилию *" required>
+              </label>
+              <label class="contest-form__label contest-form__label--flexible" for="surname">
+                Имя:
+                <input class="contest-form__input contest-form__input--text contest-form__input--name" type="text" name="surname" id="surname" placeholder="Введите ваше имя *" required>
+              </label>
+              <label class="contest-form__label contest-form__label--flexible" for="patronymic">
+                Отчество:
+                <input class="contest-form__input contest-form__input--text contest-form__input--name" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+              </label>
             </fieldset>
-            <div class="contest-form__fieldset-wrapper">
+            <div class="contest-form__fieldset-wrapper contest-form__checkbox-area">
               <fieldset class="contest-form__fieldset">
                 <legend class="contest-form__fieldset-title">Ваши безбашенные достижения в путешествии</legend>
-                <div class="contest-form__input-wrapper">
+                <div class="contest-form__input-wrapper contest-form__input-wrapper--checkbox">
                   <label class="contest-form__label contest-form__label--relative contest-form__label--checkbox" for="shark-selfie">Сделал селфи с акулой</label>
                   <input class="contest-form__input hidden-input" type="checkbox" value="shark-selfie" name="achievment-checkbox" id="shark-selfie" checked>
                   <label class="contest-form__label contest-form__label--relative contest-form__label--checkbox" for="beach-burn">Обгорел на пляже</label>
@@ -76,14 +82,14 @@
                 </div>
               </fieldset>
             </div>
-            <fieldset class="contest-form__fieldset">
+            <fieldset class="contest-form__fieldset contest-form__contacts-area">
               <legend class="visually-hidden">Укажите ваши контактные данные</legend>
               <label class="contest-form__label" for="phone">Номер телефона</label>
               <input class="contest-form__input contest-form__input--text" type="text" name="phone" id="phone" placeholder="Номер, пожалуйста">
               <label class="contest-form__label" for="email">Адрес почты</label>
               <input class="contest-form__input contest-form__input--text" type="email" name="email" id="email" placeholder="Введите почту *" required>
             </fieldset>
-            <div class="contest-form__fieldset-wrapper">
+            <div class="contest-form__fieldset-wrapper contest-form__radio-area">
               <fieldset class="contest-form__fieldset">
                 <legend class="contest-form__fieldset-title">С каким приложением путешествовали?</legend>
                 <div class="contest-form__input-wrapper">
@@ -96,13 +102,15 @@
                 </div>
               </fieldset>
             </div>
-            <div class="contest-form__comment-wrapper">
+            <div class="contest-form__comment-wrapper contest-form__text-area wrapper">
               <label class="contest-form__label contest-form__label--textarea" for="comment">Опишите свои эмоции</label>
               <textarea class="contest-form__input contest-form__input--textarea" name="comment" id="comment" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
-            <button class="contest-form__submit button" type="submit">Отправить форму</button>
-            <div class="contest-form__note-wrapper">
-              <small class="contest-form__note"><sup class="contest-form__note contest-form__note--star">*</sup> — обязательные поля</small>
+            <div class="contest-form__submit-area">
+              <button class="contest-form__submit button" type="submit">Отправить форму</button>
+              <div class="contest-form__note-wrapper contest-form__note-area">
+                <small class="contest-form__note"><sup class="contest-form__note contest-form__note--star">*</sup> — обязательные<span class="contest-form__note contest-form__note--hidden"> для заполнения</span> поля</small>
+              </div>
             </div>
           </form>
         </div>
@@ -157,7 +165,9 @@
       <section class="popup-alert__content">
         <h2 class="popup-alert__heading">Что-то пошло не так!</h2>
         <p class="popup-alert__message popup-alert__message--error">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="popup-alert__button" type="button">OK</button>
+        <div class="popup-alert__button-wrapper popup-alert__button-wrapper--error">
+          <button class="popup-alert__button" type="button">OK</button>
+        </div>
       </section>
     </div>
 
