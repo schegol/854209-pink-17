@@ -3,3 +3,23 @@
 
   background-color: #f2f2f2;
 }
+
+@media (min-width: $tablet-width) {
+  .processing-area {
+    @include d-flex (nowrap, row, space-between, stretch);
+
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .processing-area {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .processing-area__image {
+    padding-left: 80px;
+  }
+}

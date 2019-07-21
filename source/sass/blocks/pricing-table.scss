@@ -41,3 +41,15 @@
   border-bottom: 2px solid #e5e5e5;
   border-left: 2px solid #e5e5e5;
 }
+
+@media (min-width: $tablet-width) {
+  .pricing-table {
+    position: static;
+    top: auto;
+    left: auto;
+
+    margin: 0 auto;
+
+    transform: translateX(0);
+  }
+}
