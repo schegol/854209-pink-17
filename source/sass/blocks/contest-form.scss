@@ -1,16 +1,11 @@
 .contest-form__fieldset {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 35px 20px 0;
+
+  border: none;
 }
 
 .contest-form__fieldset-wrapper {
   background-color: #f2f2f2;
-}
-
-.contest-form__fieldset {
-  padding-top: 35px;
-
-  border: none;
 }
 
 .contest-form__label {
@@ -198,6 +193,7 @@
 
   .contest-form__fieldset-title {
     margin: 0 auto;
+    padding: 0 24px 0;
   }
 
   .contest-form__input--name,
@@ -234,10 +230,6 @@
 
   .contest-form__note-wrapper {
     padding-right: 20px;
-  }
-
-  .contest-form__fieldset-title {
-    padding: 0 24px 0;
   }
 
   .contest-form__label--textarea {
