@@ -42,26 +42,29 @@
     </header>
 
     <main class="page-main">
-      <section class="gallery container">
+      <section class="gallery">
         <div class="gallery__wrapper">
-          <div class="gallery__heading-wrapper wrapper">
-            <h2 class="gallery__heading">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</h2>
+          <div class="gallery__heading-wrapper container">
+            <h2 class="gallery__heading">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
           </div>
           <div class="gallery__posts">
             <article class="user-post user-post--featured">
               <a href="#" aria-label="Перейти к посту">
                 <img class="user-post__photo user-post__photo--featured" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография поста дня">
               </a>
-              <div class="user-post__info user-post__info--featured">
+              <div class="user-post__info user-post__info--featured wrapper">
                 <h3 class="user-post__author">Анна<span class="user-post__time">(5 минут назад)</span></h3>
                 <p class="user-post__description">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                <p class="user-post__likes">
-                  Нравится:
-                  <span class="user-post__like-count">215</span>
-                </p>
+                <div class="user-post__likes-wrapper user-post__likes-wrapper--featured">
+                  <a class="user-post__like-button user-post__like-button--featured" href="#"></a>
+                  <p class="user-post__likes user-post__likes--featured">
+                    Нравится:
+                    <span class="user-post__like-count">215</span>
+                  </p>
+                </div>
               </div>
             </article>
-            <div class="gallery__usual-posts wrapper">
+            <div class="gallery__usual-posts container">
               <article class="user-post">
                 <a href="#" aria-label="Перейти к посту">
                   <img class="user-post__photo" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография поста">
@@ -69,10 +72,13 @@
                 <div class="user-post__info">
                   <h3 class="user-post__author">Левон<span class="user-post__time">(5 часов назад)</span></h3>
                   <p class="user-post__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                  <p class="user-post__likes">
-                    Нравится:
-                    <span class="user-post__like-count">356</span>
-                  </p>
+                  <div class="user-post__likes-wrapper">
+                    <a class="user-post__like-button" href="#"></a>
+                    <p class="user-post__likes">
+                      Нравится:
+                      <span class="user-post__like-count">356</span>
+                    </p>
+                  </div>
                 </div>
               </article>
               <article class="user-post">
@@ -82,10 +88,13 @@
                 <div class="user-post__info">
                   <h3 class="user-post__author">Антон<span class="user-post__time">(12 часов назад)</span></h3>
                   <p class="user-post__description">Соседи будут рады!</p>
-                  <p class="user-post__likes">
-                    Нравится:
-                    <span class="user-post__like-count">666</span>
-                  </p>
+                  <div class="user-post__likes-wrapper">
+                    <a class="user-post__like-button" href="#"></a>
+                    <p class="user-post__likes">
+                      Нравится:
+                      <span class="user-post__like-count">666</span>
+                    </p>
+                  </div>
                 </div>
               </article>
               <article class="user-post">
@@ -95,10 +104,13 @@
                 <div class="user-post__info">
                   <h3 class="user-post__author">Борис<span class="user-post__time">(20 часов назад)</span></h3>
                   <p class="user-post__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
-                  <p class="user-post__likes">
-                    Нравится:
-                    <span class="user-post__like-count">215</span>
-                  </p>
+                  <div class="user-post__likes-wrapper">
+                    <a class="user-post__like-button" href="#"></a>
+                    <p class="user-post__likes">
+                      Нравится:
+                      <span class="user-post__like-count">215</span>
+                    </p>
+                  </div>
                 </div>
               </article>
               <article class="user-post">
@@ -108,10 +120,13 @@
                 <div class="user-post__info">
                   <h3 class="user-post__author">Сергей<span class="user-post__time">(25 часов назад)</span></h3>
                   <p class="user-post__description">Самая кубанская в мире!</p>
-                  <p class="user-post__likes">
-                    Нравится:
-                    <span class="user-post__like-count">4</span>
-                  </p>
+                  <div class="user-post__likes-wrapper">
+                    <a class="user-post__like-button" href="#"></a>
+                    <p class="user-post__likes">
+                      Нравится:
+                      <span class="user-post__like-count">4</span>
+                    </p>
+                  </div>
                 </div>
               </article>
               <article class="user-post">
@@ -121,10 +136,13 @@
                 <div class="user-post__info">
                   <h3 class="user-post__author">Максим<span class="user-post__time">(40 часов назад)</span></h3>
                   <p class="user-post__description">Где снег-то?</p>
-                  <p class="user-post__likes">
-                    Нравится:
-                    <span class="user-post__like-count">150</span>
-                  </p>
+                  <div class="user-post__likes-wrapper">
+                    <a class="user-post__like-button" href="#"></a>
+                    <p class="user-post__likes">
+                      Нравится:
+                      <span class="user-post__like-count">150</span>
+                    </p>
+                  </div>
                 </div>
               </article>
               <article class="user-post">
@@ -134,10 +152,13 @@
                 <div class="user-post__info">
                   <h3 class="user-post__author">Надежда<span class="user-post__time">(45 часов назад)</span></h3>
                   <p class="user-post__description">Всем GM и взаимные лайки!</p>
-                  <p class="user-post__likes">
-                    Нравится:
-                    <span class="user-post__like-count">2560</span>
-                  </p>
+                  <div class="user-post__likes-wrapper">
+                    <a class="user-post__like-button" href="#"></a>
+                    <p class="user-post__likes">
+                      Нравится:
+                      <span class="user-post__like-count">2560</span>
+                    </p>
+                  </div>
                 </div>
               </article>
             </div>

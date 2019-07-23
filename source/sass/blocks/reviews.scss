@@ -1,9 +1,5 @@
 .reviews {
-  padding-top: 45px;
-}
-
-.reviews__wrapper {
-  padding-bottom: 5px;
+  padding-top: 40px;
 }
 
 .reviews__item {
@@ -35,6 +31,10 @@
     padding-top: 10px;
   }
 
+  .reviews__wrapper {
+    padding-bottom: 8px;
+  }
+
   .reviews__item {
     @include d-flex (nowrap, column, flex-start, center);
   }
@@ -49,7 +49,7 @@
 
     &--about {
       display: inline;
-      margin-top: 5px;
+      margin-top: 3px;
 
       font-weight: 400;
       font-size: 14px;
@@ -67,6 +67,7 @@
 @media (min-width: $desktop-width) {
   .reviews {
     padding-top: 45px;
+    padding-bottom: 25px;
   }
 
   .reviews__item {
@@ -79,13 +80,14 @@
     font-size: 24px;
 
     &--about {
-      margin-top: 5px;
+      margin-top: 3px;
 
       font-size: 18px;
     }
   }
 
   .reviews__text {
+    max-width: 740px;
     padding-right: 90px;
     padding-left: 90px;
   }

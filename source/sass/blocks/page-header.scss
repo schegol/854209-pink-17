@@ -8,19 +8,7 @@
 }
 
 .page-header__heading-wrapper {
-  min-height: 170px;
-
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  // &--index {
-  //   min-height: 395px;
-  //
-  //   background-image: url("../img/iphone-hand-mobile@1x.png");
-  //   background-repeat: no-repeat;
-  //   background-position: left bottom;
-  // }
+  min-height: 172px;
 }
 
 .page-header__heading {
@@ -48,7 +36,7 @@
   }
 
   .page-header__heading {
-    padding-top: 75px;
+    padding-top: 65px;
 
     font-size: 50px;
   }
@@ -69,6 +57,6 @@
   }
 
   .page-header__heading {
-    padding-top: 70px;
+    padding-top: 60px;
   }
 }

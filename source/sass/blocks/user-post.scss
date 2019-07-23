@@ -2,12 +2,16 @@
   position: relative;
 
   margin-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   &--featured {
+    padding: 0;
+
     &::after {
       content: "Панорама дня";
       position: absolute;
@@ -34,6 +38,9 @@
 
   &--featured {
     @include reset;
+
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -83,10 +90,26 @@
   line-height: 24px;
 }
 
+.user-post__likes-wrapper {
+  position: relative;
+}
+
+.user-post__like-button {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+
+  display: block;
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/icon-heart.svg");
+}
+
 .user-post__likes {
   @include reset;
 
-  padding: 7px 0 22px 50px;
+  padding: 8px 0 22px 50px;
 
   font-size: 12px;
   line-height: 24px;
@@ -102,7 +125,7 @@
   .user-post {
     width: 300px;
     min-height: 455px;
-    margin-right: 20px;
+    padding-right: 0;
 
     &:nth-of-type(2n) {
       margin-right: 0;
@@ -111,15 +134,70 @@
     &--featured {
       width: 100%;
       min-height: 0;
+      margin-bottom: 52px;
+
+      &::after {
+        top: 57px;
+      }
+    }
+  }
+
+  .user-post__photo {
+    width: 100%;
+    height: 300px;
+
+    &--featured {
+      height: 509px;
     }
   }
 
   .user-post__info {
+    position: relative;
+
     min-height: 155px;
 
     &--featured {
       width: 620px;
       min-height: 120px;
+      margin: 0 auto;
+    }
+  }
+
+  .user-post__author {
+    padding-top: 23px;
+    padding-left: 27px;
+  }
+
+  .user-post__description {
+    padding-left: 27px;
+  }
+
+  .user-post__likes-wrapper {
+    position: absolute;
+    left: 27px;
+    bottom: 23px;
+
+    &--featured {
+      top: 16px;
+      left: 422px;
+    }
+  }
+
+  .user-post__likes {
+    padding: 0;
+
+    &--featured {
+      padding: 8px 0 22px 50px;
+    }
+  }
+
+  .user-post__like-button {
+    top: 6px;
+    left: 228px;
+
+    &--featured {
+      top: 15px;
+      left: 158px;
     }
   }
 }
@@ -128,26 +206,43 @@
   .user-post {
     width: 300px;
     min-height: 555px;
+    margin-bottom: 52px;
+    padding-right: 10px;
+    padding-left: 10px;
 
     &:nth-of-type(2n) {
-      margin-right: 20px;
-    }
-
-    &:nth-of-type(3n) {
       margin-right: 0;
     }
+
+    // &:nth-of-type(3n) {
+    //   margin-right: 0;
+    // }
 
     &--featured {
       width: 100%;
       min-height: 0;
+      padding-left: 0;
+    }
+  }
+
+  .user-post__photo {
+    height: 400px;
+
+    &--featured {
+      height: 505px;
     }
   }
 
   .user-post__info {
     &--featured {
       width: 940px;
-      min-height: 100px;
-      margin-left: 10px;
+      min-height: 95px;
+    }
+  }
+
+  .user-post__likes-wrapper {
+    &--featured {
+      left: 740px;
     }
   }
 }
