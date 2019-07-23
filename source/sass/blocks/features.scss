@@ -3,11 +3,11 @@
   @include d-flex (nowrap, column, space-between, center);
 
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 25px;
 
   font-weight: 300;
   font-size: 24px;
-  line-height: 1;
+  line-height: normal;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
 .features__list {
   @include list-reset;
 
-  padding-top: 70px;
+  padding-top: 76px;
   padding-bottom: 290px;
 
   text-align: center;
@@ -63,7 +63,7 @@
 @media (min-width: $tablet-width) {
   .features__heading {
     padding-top: 50px;
-    padding-bottom: 45px;
+    padding-bottom: 25px;
 
     font-size: 40px;
   }
@@ -87,7 +87,7 @@
 
     position: relative;
 
-    padding: 95px 20px 25px 330px;
+    padding: 75px 20px 5px 330px;
 
     text-align: left;
   }
@@ -109,12 +109,16 @@
     padding-right: 0;
     padding-left: 0;
   }
+
+  .features__item-description {
+    margin-bottom: 35px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .features__heading {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 60px;
+    padding-bottom: 58px;
 
     font-size: 50px;
   }
@@ -122,8 +126,7 @@
   .features__heading-line {
     &:last-child {
       margin-top: 0;
-      padding-left: 150px;
-      padding-right: 150px;
+      max-width: 600px;
     }
   }
 
@@ -137,7 +140,7 @@
   .features__list {
     flex-direction: row;
     justify-content: space-between;
-    padding: 385px 10px 70px 10px;
+    padding: 355px 10px 70px 10px;
 
     text-align: center;
   }
@@ -151,15 +154,15 @@
 
     width: 300px;
     padding-right: 0;
-  }
 
-  .features__item::before {
-    @include abs-pseudo;
+    &::before {
+      @include abs-pseudo;
 
-    top: -350px;
-    left: 7px;
-    width: 300px;
-    height: 300px;
+      top: -355px;
+      left: 7px;
+      width: 300px;
+      height: 300px;
+    }
   }
 
   .features__item:nth-of-type(1)::before {

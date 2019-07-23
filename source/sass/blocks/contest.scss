@@ -14,11 +14,17 @@
   &--hidden {
     display: none;
   }
+
+  & br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .contest__heading {
     padding-top: 90px;
+    padding-right: 30px;
+    padding-left: 30px;
 
     font-weight: 400;
     font-size: 18px;
@@ -26,18 +32,27 @@
 
     &--hidden {
       display: inline;
+      padding: 0;
+    }
+
+    & br {
+      display: block;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .contest__heading {
-    margin-right: 80px;
-    margin-left: 80px;
+    margin-right: 60px;
+    margin-left: 60px;
 
     &--hidden {
       margin: 0;
       margin-left: 5px;
+    }
+
+    & br {
+      display: none;
     }
   }
 }

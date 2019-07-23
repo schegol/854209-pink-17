@@ -41,6 +41,18 @@
 
     background-color: #ffffff;
   }
+
+  .research__wrapper {
+    padding-top: 95px;
+  }
+
+  .research__heading {
+    margin-bottom: 10px;
+  }
+
+  .research__text {
+    margin-bottom: 10px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -49,7 +61,7 @@
   }
 
   .research__wrapper {
-    padding: 60px 25px 110px 375px;
+    padding: 55px 25px 110px 375px;
   }
 
   .research__heading {

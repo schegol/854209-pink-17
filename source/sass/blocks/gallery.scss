@@ -11,10 +11,34 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
+
+  & br {
+    display: block;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .gallery__heading {
+    padding: 92px 50px 75px;
+
+    font-size: 18px;
+
+    & br {
+      display: none;
+    }
+  }
+
   .gallery__usual-posts {
     @include d-flex (wrap, row, flex-start, shrink);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gallery__heading {
+    padding-bottom: 86px;
+
+    & br {
+      display: block;
+    }
   }
 }

@@ -3,3 +3,11 @@
     display: block;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .logo__image {
+    &--header {
+      padding-top: 20px;
+    }
+  }
+}
