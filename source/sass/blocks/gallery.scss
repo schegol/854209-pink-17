@@ -5,16 +5,11 @@
 .gallery__heading {
   @include reset;
 
-  padding-top: 45px;
-  padding-bottom: 50px;
+  padding: 45px 35px 50px;
 
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
-
-  & br {
-    display: block;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -22,10 +17,6 @@
     padding: 92px 50px 75px;
 
     font-size: 18px;
-
-    & br {
-      display: none;
-    }
   }
 
   .gallery__usual-posts {
@@ -35,10 +26,8 @@
 
 @media (min-width: $desktop-width) {
   .gallery__heading {
+    padding-right: 170px;
     padding-bottom: 86px;
-
-    & br {
-      display: block;
-    }
+    padding-left: 170px;
   }
 }

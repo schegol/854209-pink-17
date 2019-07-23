@@ -14,15 +14,11 @@
   &--hidden {
     display: none;
   }
-
-  & br {
-    display: none;
-  }
 }
 
 @media (min-width: $tablet-width) {
   .contest__heading {
-    padding-top: 90px;
+    padding-top: 92px;
     padding-right: 30px;
     padding-left: 30px;
 
@@ -33,10 +29,6 @@
     &--hidden {
       display: inline;
       padding: 0;
-    }
-
-    & br {
-      display: block;
     }
   }
 }
@@ -49,10 +41,6 @@
     &--hidden {
       margin: 0;
       margin-left: 5px;
-    }
-
-    & br {
-      display: none;
     }
   }
 }
