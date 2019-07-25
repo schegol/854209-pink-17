@@ -138,11 +138,12 @@
             <table class="pricing-table">
               <tbody>
                 <tr>
+                  <th class="pricing-table__heading-cell pricing-table__heading-cell--empty"></th>
                   <th class="pricing-table__heading-cell">
                     База<br>
                     <span class="pricing-table__price-span">1,99 USD</span>
                   </th>
-                  <th class="pricing-table__heading-cell">
+                  <th class="pricing-table__heading-cell pricing-table__heading-cell--hit">
                     Стандарт<br>
                     <span class="pricing-table__price-span">3,99 USD</span>
                   </th>
@@ -152,24 +153,27 @@
                   </th>
                 </tr>
                 <tr>
-                  <td class="pricing-table__cell">Розовый фильтр</td>
-                  <td class="pricing-table__cell">Розовый фильтр</td>
-                  <td class="pricing-table__cell">Розовый фильтр</td>
+                  <td class="pricing-table__cell pricing-table__cell--hidden">Розовый фильтр</td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Розовый фильтр</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Розовый фильтр</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Розовый фильтр</span></td>
                 </tr>
                 <tr>
-                  <td class="pricing-table__cell">Смайлики</td>
-                  <td class="pricing-table__cell">Смайлики</td>
-                  <td class="pricing-table__cell">Смайлики</td>
+                  <td class="pricing-table__cell pricing-table__cell--hidden">Смайлики</td>
+                  <td class="pricing-table__cell pricing-table__cell--no"><span class="pricing-table__cell-content">Смайлики</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Смайлики</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Смайлики</span></td>
                 </tr>
                 <tr>
-                  <td class="pricing-table__cell">Комментарии</td>
-                  <td class="pricing-table__cell">Комментарии</td>
-                  <td class="pricing-table__cell">Комментарии</td>
+                  <td class="pricing-table__cell pricing-table__cell--hidden">Комментарии</td>
+                  <td class="pricing-table__cell pricing-table__cell--no"><span class="pricing-table__cell-content">Комментарии</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--no"><span class="pricing-table__cell-content">Комментарии</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Комментарии</span></td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p class="pricing__toggles slider__toggles">
+          <p class="pricing__toggles slider__toggles wrapper">
             <label class="slider__label" for="first-column">Тариф «База»</label>
             <label class="slider__label" for="second-column">Тариф «Стандарт»</label>
             <label class="slider__label" for="third-column">Тариф «Анлим»</label>
@@ -212,8 +216,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer-contacts__map-container">
-        </div>
+        <div class="footer-contacts__map-container" id="map"></div>
       </section>
       <section class="page-footer__copyrights-section copyrights copyrights--index container">
         <h2 class="visually-hidden">Контакты создателей приложения «Pink»</h2>
@@ -257,5 +260,7 @@
         </div>
       </section>
     </footer>
+    <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script defer type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

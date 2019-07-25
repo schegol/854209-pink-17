@@ -1,5 +1,5 @@
 .pricing {
-  min-height: 465px;
+  min-height: 473px;
 
   background-color: #f2f2f2;
   background-image: url("../img/bg-triangle-white.svg");
@@ -11,9 +11,13 @@
   position: relative;
 }
 
+.pricing__toggles {
+  padding-top: 100px;
+}
+
 @media (min-width: $tablet-width) {
   .pricing {
-    min-height: 375px;
+    min-height: 377px;
 
     background-position: center top -20px;
   }
@@ -29,13 +33,13 @@
 
 @media (min-width: $desktop-width) {
   .pricing {
-    min-height: 532px;
+    min-height: 530px;
 
     background-position: center top;
     background-size: 100%;
   }
 
   .pricing__table-wrapper {
-    padding-top: 180px;
+    padding-top: 155px;
   }
 }

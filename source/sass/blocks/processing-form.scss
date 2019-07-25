@@ -2,6 +2,108 @@
   border: none;
 }
 
+.processing-form__range {
+  width: 240px;
+  margin: 0;
+
+  background-color: transparent;
+  outline: none;
+
+  -webkit-appearance: none;
+
+  &::-webkit-slider-runnable-track {
+    width: 240px;
+    height: 2px;
+
+    background: $extra-color;
+    cursor: pointer;
+
+    animate: 0.2s;
+  }
+
+  &::-webkit-slider-thumb {
+    box-sizing: content-box;
+    width: 10px;
+    height: 10px;
+    margin-top: -6px;
+
+    background: #ffffff;
+    border: 2px solid $main-color;
+    border-radius: 50%;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    outline: none;
+  }
+
+  &:focus::-webkit-slider-thumb {
+    background: $main-color;
+  }
+
+  &::-moz-range-track {
+    width: 240px;
+    height: 2px;
+
+    background: $extra-color;
+    cursor: pointer;
+
+    animate: 0.2s;
+  }
+
+  &::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+
+    background: #ffffff;
+    border: 2px solid $main-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:focus::-moz-range-thumb {
+    background: $main-color;
+  }
+
+  &::-ms-track {
+    width: 240px;
+    height: 2px;
+
+    color: transparent;
+
+    background: transparent;
+    border-width: 0;
+    border-color: transparent;
+    cursor: pointer;
+
+    animate: 0.2s;
+  }
+
+  &::-ms-fill-lower {
+    background: $extra-color;
+  }
+
+  &::-ms-fill-upper {
+    background: $extra-color;
+  }
+
+  &::-ms-thumb {
+    width: 10px;
+    height: 10px;
+
+    background: #ffffff;
+    border: 2px solid $main-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:focus::-ms-thumb {
+    background: $main-color;
+  }
+}
+
 .processing-form__buttons-wrapper {
   @include d-flex (nowrap, column, flex-start, center);
 
@@ -24,6 +126,8 @@
 
   border: 3px solid;
   border-radius: 50px;
+
+  background-color: transparent;
 
   &--submit {
     color: $main-color;
@@ -68,6 +172,22 @@
     padding-right: 20px;
   }
 
+  .processing-form__range {
+    width: 202px;
+
+    &::-webkit-slider-runnable-track {
+      width: 202px;
+    }
+
+    &::-moz-range-track {
+      width: 202px;
+    }
+
+    &::-ms-track {
+      width: 202px;
+    }
+  }
+
   .processing-form__button {
     max-width: 260px;
   }
@@ -77,6 +197,22 @@
   .processing-form {
     max-width: 410px;
     padding-right: 60px;
+  }
+
+  .processing-form__range {
+    width: 288px;
+
+    &::-webkit-slider-runnable-track {
+      width: 288px;
+    }
+
+    &::-moz-range-track {
+      width: 288px;
+    }
+
+    &::-ms-track {
+      width: 288px;
+    }
   }
 
   .processing-form__buttons-wrapper {

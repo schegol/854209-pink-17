@@ -173,7 +173,7 @@
           </div>
           <div class="processing-area">
             <img class="processing-area__image wrapper" src="img/photo-road-mobile@1x.jpg" alt="Фотография в обработке" width="280" height="374">
-            <form class="processing-form" action="https://echo.htmlacademy.ru/" method="post">
+            <form class="processing-form wrapper" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="processing-form__fieldset wrapper">
                 <legend class="visually-hidden">Настройки фильтров изображения</legend>
                 <label class="processing-form__label" for="filter-crop">Обрезка изображения</label>
@@ -183,9 +183,9 @@
               <input class="processing-form__radio hidden-input" name="filter-switch" id="filter-crop" type="radio" checked>
               <input class="processing-form__radio hidden-input" name="filter-switch" id="filter-saturation" type="radio">
               <input class="processing-form__radio hidden-input" name="filter-switch" id="filter-contrast" type="radio">
-              <input class="processing-form__range" type="range" name="filter-crop-range">
-              <input class="processing-form__range" type="range" name="filter-saturation-range">
-              <input class="processing-form__range" type="range" name="filter-contrast-range">
+              <input class="processing-form__range" type="range" name="filter-crop-range" min="0" max="100" step="1">
+              <input class="processing-form__range" type="range" name="filter-saturation-range" min="0" max="100" step="1">
+              <input class="processing-form__range" type="range" name="filter-contrast-range" min="0" max="100" step="1">
               <div class="processing-form__buttons-wrapper">
                 <button class="processing-form__button processing-form__button--submit button" type="submit" name="processing-sumbit">Запостить</button>
                 <button class="processing-form__button processing-form__button--reset button" type="reset" name="processing-reset">Отмена</button>
