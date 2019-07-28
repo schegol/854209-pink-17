@@ -1,15 +1,50 @@
+.processing-form {
+  @include d-flex (nowrap, column, flex-start, center);
+
+  position: relative;
+}
+
 .processing-form__fieldset {
+  @include d-flex (nowrap, row, space-between, center);
+
+  width: 200px;
+  padding-top: 28px;
+  padding-left: 7px;
+
   border: none;
+}
+
+.processing-form__label {
+  cursor: pointer;
+
+  fill: #b5b9be;
+
+  &:hover,
+  &:focus {
+    fill: #8d949b;
+  }
+
+  &:active {
+    fill: $main-color;
+  }
 }
 
 .processing-form__range {
   width: 240px;
+  height: 16px;
   margin: 0;
+  margin-top: 12px;
+  margin-bottom: 30px;
 
   background-color: transparent;
   outline: none;
 
-  -webkit-appearance: none;
+  appearance: none;
+
+  &--fill,
+  &--contrast {
+    display: none;
+  }
 
   &::-webkit-slider-runnable-track {
     width: 240px;
@@ -32,7 +67,7 @@
     border-radius: 50%;
     cursor: pointer;
 
-    -webkit-appearance: none;
+    appearance: none;
   }
 
   &:focus::-webkit-slider-runnable-track {
@@ -107,7 +142,8 @@
 .processing-form__buttons-wrapper {
   @include d-flex (nowrap, column, flex-start, center);
 
-  padding-top: 38px;
+  width: 320px;
+  padding-top: 30px;
   padding-bottom: 30px;
 
   border-top: 1px solid #dddfe0;
@@ -168,12 +204,81 @@
 
 @media (min-width: $tablet-width) {
   .processing-form {
+    @include d-flex (wrap, row, flex-start, flex-start)
+
     max-width: 275px;
+    padding-top: 10px;
     padding-right: 20px;
+  }
+
+  .processing-form__fieldset {
+    @include reset;
+
+    flex-direction: column;
+    align-items: center;
+    width: 10px;
+    height: 173px;
+  }
+
+  .processing-form__wrapper {
+    justify-content: space-between;
+  }
+
+  .processing-form__label {
+    position: relative;
+
+    margin-right: 30px;
+
+    fill: $main-color;
+
+    &:hover,
+    &:focus {
+      fill: #8d949b;
+    }
+
+    &--crop svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    &--fill svg {
+      width: 24px;
+      height: 22px;
+    }
+
+    &--contrast svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &::after {
+      @include abs-pseudo;
+
+      bottom: -16px;
+      left: 0;
+
+      width: 275px;
+      height: 1px;
+
+      background-color: #dddfe0;
+    }
+  }
+
+  .processing-form__inputs {
+    @include d-flex (nowrap, column, space-between, flex-start);
+
+    height: 160px;
+    padding-top: 2px;
   }
 
   .processing-form__range {
     width: 202px;
+    margin: 0;
+
+    &--fill,
+    &--contrast {
+      display: block;
+    }
 
     &::-webkit-slider-runnable-track {
       width: 202px;
@@ -188,14 +293,32 @@
     }
   }
 
+  .processing-form__buttons-wrapper {
+    justify-content: space-around;
+    padding-top: 83px;
+    padding-right: 10px;
+    padding-bottom: 0;
+
+    border: none;
+  }
+
   .processing-form__button {
     max-width: 260px;
+
+    &--submit {
+      margin-bottom: 27px;
+    }
+
+    &--reset {
+      margin-bottom: 0;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .processing-form {
     max-width: 410px;
+    padding-top: 0;
     padding-right: 60px;
   }
 
@@ -215,12 +338,63 @@
     }
   }
 
+  .processing-form__fieldset {
+    height: 188px;
+  }
+
+  .processing-form__label {
+    margin-right: 44px;
+
+    &::after {
+      @include abs-pseudo;
+
+      bottom: 0;
+      left: 0;
+
+      width: 410px;
+      height: 1px;
+    }
+
+    &--crop svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    &--fill svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    &--contrast {
+      &::after {
+        bottom: -10px;
+        left: -7px;
+      }
+
+      & svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  .processing-form__inputs {
+    padding-top: 12px;
+  }
+
   .processing-form__buttons-wrapper {
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    padding-top: 156px;
+    padding-right: 0;
   }
 
   .processing-form__button {
     max-width: 183px;
+
+    &--submit {
+      margin: 0;
+    }
   }
 }

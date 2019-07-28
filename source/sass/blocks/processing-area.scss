@@ -11,6 +11,11 @@
     padding-top: 55px;
     padding-bottom: 55px;
   }
+
+  .processing-area__image {
+    width: 300px;
+    height: 400px;
+  }
 }
 
 @media (min-width: $desktop-width) {
