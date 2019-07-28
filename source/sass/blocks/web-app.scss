@@ -22,7 +22,15 @@
 }
 
 @media (min-width: $desktop-width) {
+  .web-app {
+    margin-bottom: 30px;
+  }
+
   .web-app__heading-wrapper {
     padding-top: 0;
+  }
+
+  .web-app__heading {
+    margin-top: 10px;
   }
 }

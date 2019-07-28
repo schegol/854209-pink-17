@@ -120,10 +120,13 @@
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
           </div>
-          <p class="reviews__toggles slider__toggles">
-            <label class="slider__label" for="first-review">Первая цитата</label>
-            <label class="slider__label" for="second-review">Вторая цитата</label>
-            <label class="slider__label" for="third-review">Третья цитата</label>
+          <p class="reviews__toggles slider__toggles slider__toggles--reviews">
+            <label class="visually-hidden" for="first-review">Первая цитата</label>
+            <label class="visually-hidden" for="second-review">Вторая цитата</label>
+            <label class="visually-hidden" for="third-review">Третья цитата</label>
+            <label class="slider__label slider__label--first" for="first-review"></label>
+            <label class="slider__label slider__label--second" for="second-review"></label>
+            <label class="slider__label slider__label--third" for="third-review"></label>
             <input class="slider__toggle hidden-input" type="radio" name="review-toggle" id="first-review" checked>
             <input class="slider__toggle hidden-input" type="radio" name="review-toggle" id="second-review">
             <input class="slider__toggle hidden-input" type="radio" name="review-toggle" id="third-review">
@@ -138,11 +141,12 @@
             <table class="pricing-table">
               <tbody>
                 <tr>
+                  <th class="pricing-table__heading-cell pricing-table__heading-cell--empty"></th>
                   <th class="pricing-table__heading-cell">
                     База<br>
                     <span class="pricing-table__price-span">1,99 USD</span>
                   </th>
-                  <th class="pricing-table__heading-cell">
+                  <th class="pricing-table__heading-cell pricing-table__heading-cell--hit">
                     Стандарт<br>
                     <span class="pricing-table__price-span">3,99 USD</span>
                   </th>
@@ -152,27 +156,33 @@
                   </th>
                 </tr>
                 <tr>
-                  <td class="pricing-table__cell">Розовый фильтр</td>
-                  <td class="pricing-table__cell">Розовый фильтр</td>
-                  <td class="pricing-table__cell">Розовый фильтр</td>
+                  <td class="pricing-table__cell pricing-table__cell--hidden">Розовый фильтр</td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Розовый фильтр</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Розовый фильтр</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Розовый фильтр</span></td>
                 </tr>
                 <tr>
-                  <td class="pricing-table__cell">Смайлики</td>
-                  <td class="pricing-table__cell">Смайлики</td>
-                  <td class="pricing-table__cell">Смайлики</td>
+                  <td class="pricing-table__cell pricing-table__cell--hidden">Смайлики</td>
+                  <td class="pricing-table__cell pricing-table__cell--no"><span class="pricing-table__cell-content">Смайлики</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Смайлики</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Смайлики</span></td>
                 </tr>
                 <tr>
-                  <td class="pricing-table__cell">Комментарии</td>
-                  <td class="pricing-table__cell">Комментарии</td>
-                  <td class="pricing-table__cell">Комментарии</td>
+                  <td class="pricing-table__cell pricing-table__cell--hidden">Комментарии</td>
+                  <td class="pricing-table__cell pricing-table__cell--no"><span class="pricing-table__cell-content">Комментарии</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--no"><span class="pricing-table__cell-content">Комментарии</span></td>
+                  <td class="pricing-table__cell pricing-table__cell--yes"><span class="pricing-table__cell-content">Комментарии</span></td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p class="pricing__toggles slider__toggles">
-            <label class="slider__label" for="first-column">Тариф «База»</label>
-            <label class="slider__label" for="second-column">Тариф «Стандарт»</label>
-            <label class="slider__label" for="third-column">Тариф «Анлим»</label>
+          <p class="pricing__toggles slider__toggles slider__toggles--pricing wrapper">
+            <label class="visually-hidden" for="first-column">Тариф «База»</label>
+            <label class="visually-hidden" for="second-column">Тариф «Стандарт»</label>
+            <label class="visually-hidden" for="third-column">Тариф «Анлим»</label>
+            <label class="slider__label slider__label--first" for="first-column"></label>
+            <label class="slider__label slider__label--second" for="second-column"></label>
+            <label class="slider__label slider__label--third" for="third-column"></label>
             <input class="slider__toggle hidden-input" type="radio" name="table-toggle" id="first-column">
             <input class="slider__toggle hidden-input" type="radio" name="table-toggle" id="second-column" checked>
             <input class="slider__toggle hidden-input" type="radio" name="table-toggle" id="third-column">
@@ -212,8 +222,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer-contacts__map-container">
-        </div>
+        <div class="footer-contacts__map-container" id="map"></div>
       </section>
       <section class="page-footer__copyrights-section copyrights copyrights--index container">
         <h2 class="visually-hidden">Контакты создателей приложения «Pink»</h2>
@@ -257,5 +266,7 @@
         </div>
       </section>
     </footer>
+    <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script defer src="js/script.js"></script>
   </body>
 </html>

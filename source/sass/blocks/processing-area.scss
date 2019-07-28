@@ -1,5 +1,5 @@
 .processing-area {
-  padding-top: 22px;
+  padding-top: 20px;
 
   background-color: #f2f2f2;
 }
@@ -10,6 +10,11 @@
 
     padding-top: 55px;
     padding-bottom: 55px;
+  }
+
+  .processing-area__image {
+    width: 300px;
+    height: 400px;
   }
 }
 

@@ -1,7 +1,46 @@
 .research {
   @include reset;
 
+  position: relative;
+
   display: none;
+
+  background-image: url("../img/icon-timer.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 190px) calc(50% - 8px);
+  background-size: 238px 276px;
+
+  &::before,
+  &::after {
+    @include abs-pseudo;
+  }
+
+  &::before {
+    top: 116px;
+    left: calc(50% - 291px);
+
+    width: 177px;
+    height: 177px;
+
+    background-color: #ffffff;
+    border: 13px solid $main-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "24";
+
+    top: 138px;
+    left: calc(50% - 246px);
+
+    width: 177px;
+    height: 177px;
+
+    font-size: 96px;
+    line-height: 149.5px;
+    font-weight: 700;
+    color: $main-color;
+  }
 }
 
 .research__wrapper {
@@ -58,10 +97,33 @@
 @media (min-width: $desktop-width) {
   .research {
     background-color: #f2f2f2;
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% - 320px) calc(50% - 28px);
+    background-size: 298px 345px;
+
+    &::before {
+      top: 81px;
+      left: calc(50% - 446px);
+
+      width: 220px;
+      height: 220px;
+
+      background-color: #f2f2f2;
+      border-width: 16px;
+    }
+
+    &::after {
+      top: 107px;
+      left: calc(50% - 390px);
+
+      font-size: 120px;
+      line-height: 186.8px;
+    }
   }
 
   .research__wrapper {
-    padding: 55px 25px 110px 375px;
+    padding: 105px 25px 110px 375px;
   }
 
   .research__heading {

@@ -94,14 +94,16 @@
 }
 
 @media (min-width: $tablet-width) {
-  .popup-alert--error {
-    width: 460px;
-    min-height: 363px;
-  }
+  .popup-alert {
+    &--error {
+      width: 460px;
+      min-height: 0;
+    }
 
-  .popup-alert--success {
-    width: 460px;
-    min-height: 431px;
+    &--success {
+      width: 460px;
+      min-height: 0;
+    }
   }
 
   .popup-alert__content {
@@ -109,11 +111,17 @@
   }
 
   .popup-alert__heading {
+    padding-right: 115px;
+    padding-left: 115px;
+
     font-size: 30px;
     line-height: 40px;
   }
 
   .popup-alert__message {
+    padding-right: 70px;
+    padding-left: 70px;
+
     font-size: 18px;
   }
 
@@ -125,6 +133,42 @@
 @media (min-width: $desktop-width) {
   .popup-alert {
     width: 780px;
-    min-height: 377px;
+    height: 377px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border-radius: 4px;
+  }
+
+  .popup-alert__content {
+    @include d-flex (nowrap, column, flex-start, center);
+
+    height: 100%;
+  }
+
+  .popup-alert__heading {
+    margin-top: 45px;
+    margin-bottom: 25px;
+  }
+
+  .popup-alert__message {
+    margin-bottom: 0;
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+
+  .popup-alert__button-wrapper {
+    min-height: 163px;
+    margin-top: auto;
+
+    &--error {
+      background-color: #f2f2f2;
+    }
+  }
+
+  .popup-alert__button {
+    &--success {
+      width: 460px;
+    }
   }
 }

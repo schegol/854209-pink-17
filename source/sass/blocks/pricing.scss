@@ -1,25 +1,27 @@
 .pricing {
-  min-height: 465px;
+  min-height: 505px;
 
   background-color: #f2f2f2;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-position: center top -34px;
+  background-position: center top;
 }
 
 .pricing__table-wrapper {
   position: relative;
 }
 
+.pricing__toggles {
+  padding-top: 100px;
+}
+
 @media (min-width: $tablet-width) {
   .pricing {
-    min-height: 375px;
-
-    background-position: center top -20px;
+    min-height: 395px;
   }
 
   .pricing__table-wrapper {
-    padding-top: 90px;
+    padding-top: 110px;
   }
 
   .pricing__toggles {
@@ -29,13 +31,12 @@
 
 @media (min-width: $desktop-width) {
   .pricing {
-    min-height: 532px;
+    min-height: 530px;
 
-    background-position: center top;
     background-size: 100%;
   }
 
   .pricing__table-wrapper {
-    padding-top: 180px;
+    padding-top: 155px;
   }
 }
