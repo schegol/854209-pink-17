@@ -2,10 +2,6 @@
   position: relative;
 }
 
-.slider__toggles {
-  position: absolute;
-}
-
 .slider__label {
   position: absolute;
 
@@ -29,6 +25,8 @@
 }
 
 .slider__toggles {
+  position: absolute;
+
   &--reviews .slider__label--first {
     top: -16px;
     left: 112px;

@@ -204,7 +204,7 @@
 
 @media (min-width: $tablet-width) {
   .processing-form {
-    @include d-flex (wrap, row, flex-start, flex-start)
+    @include d-flex (wrap, row, flex-start, flex-start);
 
     max-width: 275px;
     padding-top: 10px;
