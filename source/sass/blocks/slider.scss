@@ -24,6 +24,12 @@
   }
 }
 
+.slider__item {
+  &--hidden {
+    // display: none;
+  }
+}
+
 .slider__toggles {
   position: absolute;
 

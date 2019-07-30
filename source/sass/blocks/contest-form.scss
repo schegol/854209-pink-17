@@ -70,6 +70,7 @@
 
   &--text {
     width: 100%;
+    min-height: 61px;
   }
 
   &--textarea {
@@ -246,7 +247,7 @@
       background-image: url("../img/icon-mail.svg");
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 20px 19px;
+      background-size: 18px 13px;
     }
   }
 
@@ -385,9 +386,11 @@
     padding-right: 10px;
   }
 
-  .contest-form__contacts-area {
+  .contest-form__label-wrapper {
     @include d-flex (nowrap, row, flex-start, stretch);
+  }
 
+  .contest-form__contacts-area {
     max-width: 900px;
     margin: 0 auto 55px;
     padding-top: 34px;
