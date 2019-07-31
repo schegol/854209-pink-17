@@ -1,13 +1,48 @@
 .logo__image {
-  &--header {
+  &--header,
+  &--mobile,
+  &--gadget {
     display: block;
+  }
+
+  &--tablet,
+  &--desktop {
+    display: none;
   }
 }
 
 @media (min-width: $tablet-width) {
   .logo__image {
     &--header {
-      padding-top: 20px;
+      padding-top: 5px;
+    }
+
+    &--tablet,
+    &--gadget {
+      display: block;
+    }
+
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__image {
+    &--header {
+      padding-top: 2px;
+    }
+
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile,
+    &--tablet,
+    &--gadget {
+      display: none;
     }
   }
 }

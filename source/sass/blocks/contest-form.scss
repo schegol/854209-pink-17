@@ -15,6 +15,8 @@
   text-transform: uppercase;
 
   &--relative {
+    position: relative;
+
     padding-left: 68px;
 
     font-size: 18px;
@@ -31,10 +33,28 @@
     &:last-of-type {
       margin-bottom: 42px;
     }
+
+    &:hover .contest-form__checkbox-span--unchecked,
+    &:focus .contest-form__checkbox-span--unchecked {
+      border-color: $extra-color;
+    }
+
+    &:active .contest-form__checkbox-span--unchecked {
+      border-color: $main-color;
+    }
   }
 
   &--radio {
     margin-bottom: 45px;
+
+    &:hover .contest-form__radio-span--unchecked,
+    &:focus .contest-form__radio-span--unchecked {
+      border-color: $extra-color;
+    }
+
+    &:active .contest-form__radio-span--unchecked {
+      border-color: $main-color;
+    }
   }
 
   &--textarea {
@@ -70,6 +90,7 @@
 
   &--text {
     width: 100%;
+    min-height: 61px;
   }
 
   &--textarea {
@@ -182,6 +203,75 @@
   }
 }
 
+.contest-form__radio-span {
+  position: absolute;
+
+  box-sizing: border-box;
+
+  &--unchecked {
+    top: -8px;
+    left: -2px;
+
+    width: 39px;
+    height: 39px;
+
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+  }
+
+  &--checked {
+    top: 4px;
+    left: 10px;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: $main-color;
+    border-radius: 50%;
+  }
+}
+
+.contest-form__checkbox-span {
+  position: absolute;
+
+  box-sizing: border-box;
+
+  &--unchecked {
+    top: -5px;
+    left: -2px;
+
+    width: 39px;
+    height: 39px;
+
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+  }
+
+  &--checked {
+    top: 7px;
+    left: 7px;
+
+    width: 22px;
+    height: 10px;
+
+    border: 2px solid $main-color;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+  }
+}
+
+.contest-form__input:not(:checked) ~ .contest-form__radio-span--checked,
+.contest-form__input:not(:checked) ~ .contest-form__checkbox-span--checked {
+  display: none;
+}
+
+.contest-form__input:checked ~ .contest-form__radio-span--checked,
+.contest-form__input:checked ~ .contest-form__checkbox-span--checked {
+  display: block;
+}
+
 @media (min-width: $tablet-width) {
   .contest-form {
     @include d-flex (wrap, column, flex-start, stretch);
@@ -220,6 +310,10 @@
 
   .contest-form__label-name {
     margin-left: 35px;
+
+    &--relative {
+      margin-left: 0;
+    }
   }
 
   .contest-form__label-image {
@@ -229,7 +323,7 @@
 
     display: block;
     width: 62px;
-    height: 61px;
+    height: 62px;
 
     background-color: #e5e5e5;
     border-radius: 2px;
@@ -246,7 +340,7 @@
       background-image: url("../img/icon-mail.svg");
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 20px 19px;
+      background-size: 18px 13px;
     }
   }
 
@@ -354,6 +448,28 @@
     padding-top: 20px;
     padding-right: 20px;
   }
+
+  .contest-form__radio-span {
+    &--unchecked {
+      top: -4px;
+      left: 38px;
+    }
+
+    &--checked {
+      top: 8px;
+      left: 50px;
+    }
+  }
+
+  .contest-form__checkbox-span {
+    &--unchecked {
+      left: 39px;
+    }
+
+    &--checked {
+      left: 48px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -385,9 +501,11 @@
     padding-right: 10px;
   }
 
-  .contest-form__contacts-area {
+  .contest-form__label-wrapper {
     @include d-flex (nowrap, row, flex-start, stretch);
+  }
 
+  .contest-form__contacts-area {
     max-width: 900px;
     margin: 0 auto 55px;
     padding-top: 34px;
@@ -473,6 +591,28 @@
   .contest-form__note {
     &--hidden {
       display: inline;
+    }
+  }
+
+  .contest-form__radio-span {
+    &--unchecked {
+      top: -5px;
+      left: 55px;
+    }
+
+    &--checked {
+      top: 7px;
+      left: 67px;
+    }
+  }
+
+  .contest-form__checkbox-span {
+    &--unchecked {
+      left: 33px;
+    }
+
+    &--checked {
+      left: 42px;
     }
   }
 }

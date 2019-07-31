@@ -10,7 +10,7 @@
 .copyrights__wrapper {
   @include d-flex (nowrap, column, space-between, center);
 
-  min-height: 195px;
+  height: 195px;
 }
 
 .copyrights__social-list {
@@ -46,7 +46,7 @@
 
 .copyrights__developer-link {
   position: relative;
-  top: 4px;
+  top: 8px;
 }
 
 @media (min-width: $tablet-width) {
@@ -59,9 +59,14 @@
     }
   }
 
+  .copyrights__logo-link {
+    position: relative;
+    top: -3px;
+  }
+
   .copyrights__wrapper {
     flex-direction: row;
-    min-height: 0;
+    height: auto;
   }
 
   .copyrights__social-list {
@@ -75,6 +80,10 @@
   .copyrights {
     padding-top: 75px;
     padding-bottom: 75px;
+  }
+
+  .copyrights__logo-link {
+    top: -10px;
   }
 
   .copyrights__social-list {

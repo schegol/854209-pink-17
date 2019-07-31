@@ -30,6 +30,8 @@
 .popup-alert__message {
   @include reset;
 
+  box-sizing: border-box;
+  max-width: 100%;
   padding-right: 20px;
   padding-left: 20px;
 
@@ -48,7 +50,7 @@
   @include d-flex (nowrap, column, center, center);
 
   width: 100%;
-  min-height: 163px;
+  height: 163px;
 
   background-color: #f2f2f2;
 
@@ -158,7 +160,7 @@
   }
 
   .popup-alert__button-wrapper {
-    min-height: 163px;
+    height: 163px;
     margin-top: auto;
 
     &--error {

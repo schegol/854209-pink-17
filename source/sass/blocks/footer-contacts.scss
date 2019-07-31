@@ -36,6 +36,8 @@
 }
 
 .footer-contacts__contact-info {
+  max-width: 100%;
+
   font-weight: 300;
   font-size: 24px;
   line-height: normal;
@@ -102,7 +104,7 @@
   }
 
   .footer-contacts__contact-item {
-    max-width: 250px;
+    width: 250px;
     margin-bottom: 45px;
     padding-right: 0;
     padding-left: 0;
@@ -152,7 +154,7 @@
 
   .footer-contacts__contact-item {
     flex-grow: 1;
-    max-width: 220px;
+    width: 220px;
     margin-bottom: 0;
 
     &:nth-of-type(1) {
@@ -175,7 +177,7 @@
   }
 
   .footer-contacts__map-container {
-    max-width: 1200px;
+    max-width: 100%;
     min-height: 500px;
     margin: 0 auto;
 
