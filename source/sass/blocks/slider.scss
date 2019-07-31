@@ -24,9 +24,13 @@
   }
 }
 
+.slider__arrow {
+  display: none;
+}
+
 .slider__item {
   &--hidden {
-    // display: none;
+    display: none;
   }
 }
 
@@ -84,6 +88,61 @@
     &--reviews .slider__label--third {
       top: -10px;
       left: 332px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__label {
+    display: none;
+  }
+
+  .slider__arrow {
+    position: absolute;
+    top: -193px;
+
+    display: block;
+    width: 50px;
+    height: 42px;
+
+    font-size: 0;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+
+    &--left {
+      left: -13px;
+    }
+
+    &--right {
+      left: 905px;
+    }
+
+    & path {
+      fill: $extra-color;
+    }
+
+    & svg {
+      opacity: 0.3;
+    }
+
+    &:hover,
+    &:focus{
+      outline: none;
+
+      & svg {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      padding: 0;
+
+      & svg {
+      opacity: 0.1;
+      }
     }
   }
 }
