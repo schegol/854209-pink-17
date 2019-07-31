@@ -129,7 +129,7 @@
     }
 
     &:hover,
-    &:focus{
+    &:focus {
       outline: none;
 
       & svg {
@@ -141,7 +141,7 @@
       padding: 0;
 
       & svg {
-      opacity: 0.1;
+        opacity: 0.1;
       }
     }
   }
