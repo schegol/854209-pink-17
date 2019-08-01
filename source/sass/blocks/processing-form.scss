@@ -2,19 +2,28 @@
   @include d-flex (nowrap, column, flex-start, center);
 
   position: relative;
+
+  padding-bottom: 15px;
 }
 
 .processing-form__fieldset {
-  @include d-flex (nowrap, row, space-between, center);
+  @include reset;
 
-  width: 200px;
-  padding-top: 28px;
-  padding-left: 7px;
+  padding-bottom: 13px;
 
   border: none;
 }
 
+.processing-form__inputs {
+  @include d-flex (wrap, row, space-between, center);
+
+  width: 200px;
+  padding-top: 28px;
+}
+
 .processing-form__label {
+  font-size: 0;
+
   cursor: pointer;
 
   fill: #b5b9be;
@@ -30,9 +39,11 @@
 }
 
 .processing-form__range {
+  @include reset;
+
+  display: none;
   width: 240px;
   min-height: 16px;
-  margin: 0;
   margin-top: 12px;
   margin-bottom: 16px;
 
@@ -40,11 +51,6 @@
   outline: none;
 
   appearance: none;
-
-  &--fill,
-  &--contrast {
-    display: none;
-  }
 
   &::-webkit-slider-runnable-track {
     width: 240px;
@@ -139,12 +145,24 @@
   }
 }
 
+.processing-form__radio {
+  &:checked + .processing-form__label {
+    fill: $main-color;
+  }
+
+  &--crop:checked ~ .processing-form__range--crop,
+  &--fill:checked ~ .processing-form__range--fill,
+  &--contrast:checked ~ .processing-form__range--contrast {
+    display: block;
+  }
+}
+
 .processing-form__buttons-wrapper {
   @include d-flex (nowrap, column, flex-start, center);
 
   width: 320px;
   padding-top: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 
   border-top: 1px solid #dddfe0;
 }
@@ -227,13 +245,18 @@
   .processing-form__label {
     position: relative;
 
+    height: 22px;
     margin-right: 30px;
 
     fill: $main-color;
 
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
+    }
+
     &:hover,
     &:focus {
-      fill: #8d949b;
+      fill: $main-color;
     }
 
     &--crop svg {
@@ -246,15 +269,19 @@
       height: 22px;
     }
 
-    &--contrast svg {
-      width: 16px;
-      height: 16px;
+    &--contrast {
+      align-self: center;
+
+      & svg {
+        width: 16px;
+        height: 16px;
+      }
     }
 
     &::after {
       @include abs-pseudo;
 
-      bottom: -16px;
+      bottom: -22px;
       left: 0;
 
       width: 275px;
@@ -265,19 +292,19 @@
   }
 
   .processing-form__inputs {
-    @include d-flex (nowrap, column, space-between, flex-start);
+    @include d-flex (wrap, column, flex-start, flex-start);
 
-    height: 160px;
+    height: 170px;
     padding-top: 2px;
   }
 
   .processing-form__range {
+    display: block;
     width: 202px;
     margin: 0;
 
-    &--fill,
-    &--contrast {
-      display: block;
+    &:not(:last-of-type) {
+      margin-bottom: 54px;
     }
 
     &::-webkit-slider-runnable-track {
@@ -325,6 +352,16 @@
   .processing-form__range {
     width: 288px;
 
+    &:nth-of-type(1) {
+      margin-top: 10px;
+      margin-bottom: 57px;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: 0;
+      margin-bottom: 50px;
+    }
+
     &::-webkit-slider-runnable-track {
       width: 288px;
     }
@@ -340,17 +377,15 @@
 
   .processing-form__fieldset {
     width: 92px;
-    height: 188px;
+    height: 200px;
   }
 
   .processing-form__label {
     margin-right: 44px;
 
     &::after {
-      @include abs-pseudo;
-
-      bottom: 0;
-      left: 0;
+      bottom: -33px;
+      left: -8px;
 
       width: 410px;
       height: 1px;
@@ -366,28 +401,22 @@
       height: 48px;
     }
 
-    &--contrast {
-      &::after {
-        bottom: -10px;
-        left: -7px;
-      }
-
-      & svg {
-        width: 32px;
-        height: 32px;
-      }
+    &--contrast svg {
+      width: 32px;
+      height: 32px;
     }
   }
 
   .processing-form__inputs {
-    padding-top: 12px;
+    height: 180px;
+    padding-top: 0;
   }
 
   .processing-form__buttons-wrapper {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding-top: 156px;
+    padding-top: 146px;
     padding-right: 0;
   }
 
