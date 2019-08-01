@@ -9,7 +9,7 @@
     @include d-flex (nowrap, row, space-between, stretch);
 
     padding-top: 55px;
-    padding-bottom: 55px;
+    padding-bottom: 41px;
   }
 
   .processing-area__image {
@@ -22,6 +22,8 @@
   .processing-area {
     margin-right: 10px;
     margin-left: 10px;
+    padding-top: 57px;
+    padding-bottom: 45px;
   }
 
   .processing-area__image {
