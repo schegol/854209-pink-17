@@ -258,7 +258,7 @@
 
     &:hover,
     &:focus {
-      fill: #8d949b;
+      fill: $main-color;
     }
 
     &--crop svg {
@@ -403,9 +403,9 @@
       height: 48px;
     }
 
-    &--contrast  svg {
-        width: 32px;
-        height: 32px;
+    &--contrast svg {
+      width: 32px;
+      height: 32px;
     }
   }
 
