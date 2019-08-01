@@ -146,15 +146,13 @@
 }
 
 .processing-form__radio {
-  &--crop:checked ~ .processing-form__inputs .processing-form__label[for="filter-crop"],
-  &--fill:checked ~ .processing-form__inputs .processing-form__label[for="filter-fill"],
-  &--contrast:checked ~ .processing-form__inputs .processing-form__label[for="filter-contrast"] {
+  &:checked + .processing-form__label {
     fill: $main-color;
   }
 
-  &--crop:checked ~ .processing-form__inputs .processing-form__range--crop,
-  &--fill:checked ~ .processing-form__inputs .processing-form__range--fill,
-  &--contrast:checked ~ .processing-form__inputs .processing-form__range--contrast {
+  &--crop:checked ~ .processing-form__range--crop,
+  &--fill:checked ~ .processing-form__range--fill,
+  &--contrast:checked ~ .processing-form__range--contrast {
     display: block;
   }
 }
