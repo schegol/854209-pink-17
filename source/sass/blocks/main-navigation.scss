@@ -50,6 +50,34 @@
   }
 }
 
+.main-navigation__toggle {
+  font-size: 0;
+  color: #ffffff;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $main-color;
+  }
+
+  &:active {
+    padding-right: 8px;
+
+    color: $main-color;
+
+    opacity: 0.3;
+  }
+}
+
+.main-navigation__toggle-image {
+  &--burger {
+    display: none;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .main-navigation__top-bar {
     width: 620px;

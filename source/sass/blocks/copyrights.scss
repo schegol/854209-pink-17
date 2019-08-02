@@ -1,7 +1,4 @@
 .copyrights {
-  padding-top: 40px;
-  padding-bottom: 50px;
-
   &--index {
     display: none;
   }
@@ -27,6 +24,8 @@
   width: 45px;
   height: 45px;
 
+  color: $main-color;
+
   border: 3px solid rgba($extra-color, 0.1);
   border-radius: 50%;
 
@@ -36,6 +35,8 @@
   }
 
   &:active {
+    color: rgba($main-color, 0.3);
+
     border-color: rgba($extra-color, 0.1);
   }
 }
@@ -51,11 +52,9 @@
 
 @media (min-width: $tablet-width) {
   .copyrights {
-    padding-top: 35px;
-    padding-bottom: 35px;
-
     &--index {
       display: block;
+      padding-top: 35px;
     }
   }
 
@@ -78,8 +77,9 @@
 
 @media (min-width: $desktop-width) {
   .copyrights {
-    padding-top: 75px;
-    padding-bottom: 75px;
+    &--index {
+      padding-top: 75px;
+    }
   }
 
   .copyrights__logo-link {

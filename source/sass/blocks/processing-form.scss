@@ -19,6 +19,7 @@
 
   width: 200px;
   padding-top: 28px;
+  padding-right: 9px;
 }
 
 .processing-form__label {
@@ -296,6 +297,7 @@
 
     height: 170px;
     padding-top: 2px;
+    padding-right: 0;
   }
 
   .processing-form__range {
@@ -352,7 +354,7 @@
   .processing-form__range {
     width: 288px;
 
-    &:nth-of-type(1) {
+    &--crop {
       margin-top: 10px;
       margin-bottom: 57px;
     }
