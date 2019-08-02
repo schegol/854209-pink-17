@@ -8,6 +8,19 @@
   color: $extra-color;
 }
 
+.developer__image {
+  color: $main-color;
+
+  &:hover,
+  &:focus {
+    color: $extra-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .developer {
     width: 150px;

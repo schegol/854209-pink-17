@@ -9,6 +9,36 @@
   &--desktop {
     display: none;
   }
+
+  &--mobile {
+    color: #ffffff;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
+
+    &:active {
+      color: #ffffff;
+
+      opacity: 0.3;
+    }
+  }
+
+  &--gadget {
+    color: $extra-color;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
+
+    &:active {
+      color: $extra-color;
+
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -26,6 +56,21 @@
     &--desktop {
       display: none;
     }
+
+    &--tablet {
+      color: #ffffff;
+
+      &:hover,
+      &:focus {
+        color: $main-color;
+      }
+
+      &:active {
+        color: #ffffff;
+
+        opacity: 0.3;
+      }
+    }
   }
 }
 
@@ -35,14 +80,42 @@
       padding-top: 2px;
     }
 
-    &--desktop {
-      display: block;
-    }
-
     &--mobile,
     &--tablet,
     &--gadget {
       display: none;
+    }
+
+    &--desktop {
+      display: block;
+
+      color: #ffffff;
+
+      &:hover,
+      &:focus {
+        color: $main-color;
+      }
+
+      &:active {
+        color: #ffffff;
+
+        opacity: 0.3;
+      }
+    }
+
+    &--footer {
+      color: $extra-color;
+
+      &:hover,
+      &:focus {
+        color: $main-color;
+      }
+
+      &:active {
+        color: $extra-color;
+
+        opacity: 0.3;
+      }
     }
   }
 }
