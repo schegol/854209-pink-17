@@ -80,10 +80,6 @@
       padding-top: 2px;
     }
 
-    &--desktop {
-      display: block;
-    }
-
     &--mobile,
     &--tablet,
     &--gadget {
@@ -91,6 +87,8 @@
     }
 
     &--desktop {
+      display: block;
+
       color: #ffffff;
 
       &:hover,
