@@ -1,3 +1,5 @@
+//map://
+
 var mapInteractive = document.querySelector("#map");
 if (mapInteractive) {
   ymaps.ready(function () {
@@ -34,3 +36,27 @@ if (mapInteractive) {
       myMap.controls.remove('routeEditor');
   });
 }
+
+//mobile menu://
+
+var nav = document.querySelector(".main-navigation");
+var toggle = document.querySelector(".main-navigation__toggle");
+var toggleImage = document.querySelector(".main-navigation__toggle-image");
+var cross = document.querySelector(".main-navigation__toggle-image--cross");
+var burger = document.querySelector(".main-navigation__toggle-image--burger");
+
+if (nav.classList.contains("main-navigation--no-js")) {
+  nav.classList.remove("main-navigation--no-js");
+  nav.classList.add("main-navigation--closed");
+  toggle.classList.add("main-navigation__toggle--closed");
+  toggle.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (nav.classList.contains("main-navigation--closed")) {
+      nav.classList.remove("main-navigation--closed");
+      toggle.classList.remove("main-navigation__toggle--closed");
+    } else {
+      nav.classList.add("main-navigation--closed");
+      toggle.classList.add("main-navigation__toggle--closed");
+    };
+  });
+};

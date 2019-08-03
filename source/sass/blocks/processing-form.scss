@@ -27,15 +27,19 @@
 
   cursor: pointer;
 
-  fill: #b5b9be;
+  color: $extra-color;
+
+  opacity: 0.3;
 
   &:hover,
   &:focus {
-    fill: #8d949b;
+    opacity: 0.5;
   }
 
   &:active {
-    fill: $main-color;
+    color: $main-color;
+
+    opacity: 1;
   }
 }
 
@@ -148,7 +152,9 @@
 
 .processing-form__radio {
   &:checked + .processing-form__label {
-    fill: $main-color;
+    color: $main-color;
+
+    opacity: 1;
   }
 
   &--crop:checked ~ .processing-form__range--crop,
@@ -249,7 +255,9 @@
     height: 22px;
     margin-right: 30px;
 
-    fill: $main-color;
+    color: $main-color;
+
+    opacity: 1;
 
     &:not(:last-of-type) {
       margin-bottom: 50px;
@@ -257,7 +265,9 @@
 
     &:hover,
     &:focus {
-      fill: $main-color;
+      color: $main-color;
+
+      opacity: 1;
     }
 
     &--crop svg {

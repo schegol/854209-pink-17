@@ -3,6 +3,24 @@
   @include d-flex (nowrap, column, flex-start, stretch);
 
   background-color: $extra-color;
+
+  &--no-js {
+    & .main-navigation__toggle {
+      visibility: hidden;
+    }
+  }
+
+  &--closed {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    & .main-navigation__list-wrapper {
+      display: none;
+    }
+
+    & .main-navigation__toggle {
+      visibility: visible;
+    }
+  }
 }
 
 .main-navigation__top-bar {
@@ -51,6 +69,8 @@
 }
 
 .main-navigation__toggle {
+  padding: 0;
+
   font-size: 0;
   color: #ffffff;
 
@@ -64,17 +84,27 @@
   }
 
   &:active {
-    padding-right: 8px;
-
     color: $main-color;
 
     opacity: 0.3;
   }
-}
 
-.main-navigation__toggle-image {
-  &--burger {
+  & .main-navigation__toggle-image--burger {
     display: none;
+  }
+
+  & .main-navigation__toggle-image--cross {
+    display: block;
+  }
+
+  &--closed {
+    & .main-navigation__toggle-image--burger {
+      display: block;
+    }
+
+    & .main-navigation__toggle-image--cross {
+      display: none;
+    }
   }
 }
 
@@ -86,6 +116,16 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-navigation {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &--closed {
+      & .main-navigation__list-wrapper {
+        display: block;
+      }
+    }
+  }
+
   .main-navigation__wrapper {
     @include d-flex (nowrap, row, space-between, center);
 
