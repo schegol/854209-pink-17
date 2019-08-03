@@ -6,6 +6,16 @@
   border-collapse: collapse;
 
   transform: translateX(-50%);
+
+  transition: left 0.5s ease-out;
+
+  &--first-column {
+    left: 440px;
+  }
+
+  &--third-column {
+    left: -120px;
+  }
 }
 
 .pricing-table__heading-cell {
