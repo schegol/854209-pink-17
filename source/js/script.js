@@ -65,21 +65,15 @@ var tableRadio3 = document.getElementById("third-column");
 
 if (table) {
   tableRadio1.addEventListener("click", function (evt) {
-    if (tableRadio1.checked=true) {
-      table.classList.add("pricing-table--first-column");
-      table.classList.remove("pricing-table--third-column");
-    };
+    table.classList.add("pricing-table--first-column");
+    table.classList.remove("pricing-table--third-column");
   });
   tableRadio2.addEventListener("click", function (evt) {
-    if (tableRadio1.checked=true) {
-      table.classList.remove("pricing-table--first-column");
-      table.classList.remove("pricing-table--third-column");
-    };
+    table.classList.remove("pricing-table--first-column");
+    table.classList.remove("pricing-table--third-column");
   });
   tableRadio3.addEventListener("click", function (evt) {
-    if (tableRadio1.checked=true) {
-      table.classList.remove("pricing-table--first-column");
-      table.classList.add("pricing-table--third-column");
-    };
+    table.classList.remove("pricing-table--first-column");
+    table.classList.add("pricing-table--third-column");
   });
 };
