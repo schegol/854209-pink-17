@@ -45,7 +45,7 @@ gulp.task("server", function () {
 
 gulp.task("refresh", function (done) {
   server.reload();
-  done;
+  done();
 });
 
 gulp.task("images", function() {
