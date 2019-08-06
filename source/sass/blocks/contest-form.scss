@@ -90,6 +90,16 @@
   border: 2px solid #e5e5e5;
   border-radius: 2px;
 
+  &:focus + .contest-form__checkbox-span--unchecked,
+  &:focus + .contest-form__radio-span--unchecked {
+    border-color: $extra-color;
+  }
+
+  &:active + .contest-form__checkbox-span--unchecked,
+  &:active + .contest-form__radio-span--unchecked {
+    border-color: $main-color;
+  }
+
   &--text {
     width: 100%;
     min-height: 61px;
