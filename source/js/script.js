@@ -77,3 +77,48 @@ if (table) {
     table.classList.add("pricing-table--third-column");
   });
 };
+
+//form popups://
+
+var form = document.querySelector(".contest-form");
+
+if (form) {
+  var formSubmit = document.querySelector(".contest-form__submit");
+  var formName = form.getElementById("name");
+  var formSurname = form.getElementById("surname");
+  var formEmail = form.getElementById("email");
+  var alertError = document.querySelector(".popup-alert--error");
+  var alertErrorClose = alertError.querySelector(".popup-alert__button--error");
+  var alertSuccess = document.querySelector(".popup-alert--success");
+  var alertSuccessClose = alertError.querySelector(".popup-alert__button--success");
+
+  form.addEventListener("submit", function (evt) {
+    if (!formName.value || !formSurname.value || !formEmail.value) {
+      evt.preventDefault();
+      alertError.classList.add("popup-alert--show");
+    } else {
+      evt.preventDefault();
+      alertSuccess.classList.add("popup-alert--show");
+    }
+  });
+
+  alertErrorClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    alertError.classList.remove("popup-alert--show");
+  });
+
+  alertSuccessClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    alertSuccess.classList.remove("popup-alert--show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (alertError.classList.contains("popup-alert--show") || alertSuccess.classList.contains("popup-alert--show")) {
+        alertError.classList.remove("popup-alert--show");
+        alertSuccess.classList.remove("popup-alert--show");
+      }
+    }
+  });
+}
