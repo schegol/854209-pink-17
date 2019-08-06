@@ -19,7 +19,7 @@
 
   width: 240px;
   padding-top: 28px;
-  padding-right: 9px;
+  padding-right: 0;
 }
 
 .processing-form__label {
@@ -43,11 +43,11 @@
   }
 
   &--crop {
-    margin-left: 20px;
+    margin-left: 13px;
   }
 
   &--contrast {
-    margin-right: 20px;
+    margin-right: 28px;
   }
 }
 
@@ -279,9 +279,13 @@
       opacity: 1;
     }
 
-    &--crop svg {
-      width: 22px;
-      height: 22px;
+    &--crop {
+      margin-left: 0;
+
+      & svg {
+        width: 22px;
+        height: 22px;
+      }
     }
 
     &--fill svg {
