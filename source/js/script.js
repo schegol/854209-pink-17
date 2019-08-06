@@ -84,20 +84,19 @@ var form = document.querySelector(".contest-form");
 
 if (form) {
   var formSubmit = document.querySelector(".contest-form__submit");
-  var formName = form.getElementById("name");
-  var formSurname = form.getElementById("surname");
-  var formEmail = form.getElementById("email");
+  var formName = document.querySelector("#name");
+  var formSurname = document.querySelector("#surname");
+  var formEmail = document.querySelector("#email");
   var alertError = document.querySelector(".popup-alert--error");
-  var alertErrorClose = alertError.querySelector(".popup-alert__button--error");
+  var alertErrorClose = document.querySelector(".popup-alert__button--error");
   var alertSuccess = document.querySelector(".popup-alert--success");
-  var alertSuccessClose = alertError.querySelector(".popup-alert__button--success");
+  var alertSuccessClose = document.querySelector(".popup-alert__button--success");
 
   form.addEventListener("submit", function (evt) {
-    if (!formName.value || !formSurname.value || !formEmail.value) {
-      evt.preventDefault();
+    evt.preventDefault();
+    if (!form.checkValidity()) {
       alertError.classList.add("popup-alert--show");
     } else {
-      evt.preventDefault();
       alertSuccess.classList.add("popup-alert--show");
     }
   });
@@ -113,7 +112,7 @@ if (form) {
   });
 
   window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
+    if (evt.key === 27) {
       evt.preventDefault();
       if (alertError.classList.contains("popup-alert--show") || alertSuccess.classList.contains("popup-alert--show")) {
         alertError.classList.remove("popup-alert--show");
