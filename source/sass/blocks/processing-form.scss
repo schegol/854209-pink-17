@@ -17,7 +17,7 @@
 .processing-form__inputs {
   @include d-flex (wrap, row, space-between, center);
 
-  width: 200px;
+  width: 240px;
   padding-top: 28px;
   padding-right: 9px;
 }
@@ -40,6 +40,14 @@
     color: $main-color;
 
     opacity: 1;
+  }
+
+  &--crop {
+    margin-left: 20px;
+  }
+
+  &--contrast {
+    margin-right: 20px;
   }
 }
 
