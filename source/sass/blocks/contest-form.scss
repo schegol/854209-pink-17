@@ -35,7 +35,8 @@
     }
 
     &:hover .contest-form__checkbox-span--unchecked,
-    &:focus .contest-form__checkbox-span--unchecked {
+    &:focus .contest-form__checkbox-span--unchecked,
+    &:focus-within .contest-form__checkbox-span--unchecked {
       border-color: $extra-color;
     }
 
@@ -48,7 +49,8 @@
     margin-bottom: 45px;
 
     &:hover .contest-form__radio-span--unchecked,
-    &:focus .contest-form__radio-span--unchecked {
+    &:focus .contest-form__radio-span--unchecked,
+    &:focus-within .contest-form__radio-span--unchecked {
       border-color: $extra-color;
     }
 
