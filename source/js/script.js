@@ -51,12 +51,65 @@ if (nav.classList.contains("main-navigation--no-js")) {
   toggle.classList.add("main-navigation__toggle--closed");
   toggle.addEventListener("click", function (evt) {
     evt.preventDefault();
-    if (nav.classList.contains("main-navigation--closed")) {
-      nav.classList.remove("main-navigation--closed");
-      toggle.classList.remove("main-navigation__toggle--closed");
-    } else {
-      nav.classList.add("main-navigation--closed");
-      toggle.classList.add("main-navigation__toggle--closed");
-    };
+    nav.classList.toggle("main-navigation--closed");
+    toggle.classList.toggle("main-navigation__toggle--closed");
   });
 };
+
+//pricing slider://
+
+var table = document.querySelector(".pricing-table");
+var tableRadio1 = document.getElementById("first-column");
+var tableRadio2 = document.getElementById("second-column");
+var tableRadio3 = document.getElementById("third-column");
+
+if (table) {
+  tableRadio1.addEventListener("click", function (evt) {
+    table.classList.add("pricing-table--first-column");
+    table.classList.remove("pricing-table--third-column");
+  });
+  tableRadio2.addEventListener("click", function (evt) {
+    table.classList.remove("pricing-table--first-column");
+    table.classList.remove("pricing-table--third-column");
+  });
+  tableRadio3.addEventListener("click", function (evt) {
+    table.classList.remove("pricing-table--first-column");
+    table.classList.add("pricing-table--third-column");
+  });
+};
+
+//form popups://
+
+var form = document.querySelector(".contest-form");
+
+if (form) {
+  var formSubmit = document.querySelector(".contest-form__submit");
+  var formName = document.querySelector("#name");
+  var formSurname = document.querySelector("#surname");
+  var formEmail = document.querySelector("#email");
+  var alertError = document.querySelector(".popup-alert--error");
+  var alertSuccess = document.querySelector(".popup-alert--success");
+  var closeButtons = document.querySelectorAll(".popup-alert__button");
+
+  form.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+    form.checkValidity() ? alertSuccess.classList.add("popup-alert--show") : alertError.classList.add("popup-alert--show");
+  });
+
+  [].forEach.call(closeButtons, function(button) {
+    button.addEventListener("click", function() {
+      alertSuccess.classList.contains("popup-alert--show") && alertSuccess.classList.remove("popup-alert--show");
+      alertError.classList.contains("popup-alert--show") && alertError.classList.remove("popup-alert--show");
+    })
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.code === "Escape") {
+      evt.preventDefault();
+      if (alertError.classList.contains("popup-alert--show") || alertSuccess.classList.contains("popup-alert--show")) {
+        alertError.classList.remove("popup-alert--show");
+        alertSuccess.classList.remove("popup-alert--show");
+      }
+    }
+  });
+}

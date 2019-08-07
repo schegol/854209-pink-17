@@ -10,17 +10,17 @@
   width: 6px;
   height: 6px;
 
-  background-color: #bec2c7;
+  background-color: rgba($extra-color, 0.3);
   border-radius: 50%;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: #7e868f;
+    background-color: rgba($extra-color, 0.6);
   }
 
   &:active {
-    background-color: #e9ebec;
+    background-color: rgba($extra-color, 0.1);
   }
 }
 
