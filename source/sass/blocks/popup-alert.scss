@@ -1,9 +1,14 @@
 .popup-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
   display: none;
   width: 320px;
   margin: 0 auto;
 
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+  transform: translate(-50%, -50%);
 
   &--error {
     padding: 45px 0 50px;
@@ -19,6 +24,8 @@
 }
 
 .popup-alert__content {
+  background-color: #ffffff;
+
   text-align: center;
 }
 

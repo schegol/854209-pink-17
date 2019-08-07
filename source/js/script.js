@@ -88,31 +88,23 @@ if (form) {
   var formSurname = document.querySelector("#surname");
   var formEmail = document.querySelector("#email");
   var alertError = document.querySelector(".popup-alert--error");
-  var alertErrorClose = document.querySelector(".popup-alert__button--error");
   var alertSuccess = document.querySelector(".popup-alert--success");
-  var alertSuccessClose = document.querySelector(".popup-alert__button--success");
+  var closeButtons = document.querySelectorAll(".popup-alert__button");
 
   form.addEventListener("submit", function (evt) {
     evt.preventDefault();
-    if (!form.checkValidity()) {
-      alertError.classList.add("popup-alert--show");
-    } else {
-      alertSuccess.classList.add("popup-alert--show");
-    }
+    form.checkValidity() ? alertSuccess.classList.add("popup-alert--show") : alertError.classList.add("popup-alert--show");
   });
 
-  alertErrorClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    alertError.classList.remove("popup-alert--show");
-  });
-
-  alertSuccessClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    alertSuccess.classList.remove("popup-alert--show");
+  [].forEach.call(closeButtons, function(button) {
+    button.addEventListener("click", function() {
+      alertSuccess.classList.contains("popup-alert--show") && alertSuccess.classList.remove("popup-alert--show");
+      alertError.classList.contains("popup-alert--show") && alertError.classList.remove("popup-alert--show");
+    })
   });
 
   window.addEventListener("keydown", function (evt) {
-    if (evt.key === 27) {
+    if (evt.code === "Escape") {
       evt.preventDefault();
       if (alertError.classList.contains("popup-alert--show") || alertSuccess.classList.contains("popup-alert--show")) {
         alertError.classList.remove("popup-alert--show");
