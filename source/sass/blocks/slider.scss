@@ -36,36 +36,36 @@
 
 .slider__toggles {
   position: absolute;
+}
 
-  &--reviews .slider__label--first {
-    top: -16px;
-    left: 112px;
-  }
+.slider__toggles--reviews .slider__label--first {
+  top: -16px;
+  left: 112px;
+}
 
-  &--reviews .slider__label--second {
-    top: -16px;
-    left: 138px;
-  }
+.slider__toggles--reviews .slider__label--second {
+  top: -16px;
+  left: 138px;
+}
 
-  &--reviews .slider__label--third {
-    top: -16px;
-    left: 162px;
-  }
+.slider__toggles--reviews .slider__label--third {
+  top: -16px;
+  left: 162px;
+}
 
-  &--pricing .slider__label--first {
-    top: 155px;
-    left: 132px;
-  }
+.slider__toggles--pricing .slider__label--first {
+  top: 155px;
+  left: 132px;
+}
 
-  &--pricing .slider__label--second {
-    top: 155px;
-    left: 158px;
-  }
+.slider__toggles--pricing .slider__label--second {
+  top: 155px;
+  left: 158px;
+}
 
-  &--pricing .slider__label--third {
-    top: 155px;
-    left: 182px;
-  }
+.slider__toggles--pricing .slider__label--third {
+  top: 155px;
+  left: 182px;
 }
 
 .slider__toggle:nth-child(1):checked ~ .slider__label--first,
@@ -77,21 +77,19 @@
 }
 
 @media (min-width: $tablet-width) {
-  .slider__toggles {
-    &--reviews .slider__label--first {
-      top: -10px;
-      left: 282px;
-    }
+  .slider__toggles--reviews .slider__label--first {
+    top: -10px;
+    left: 282px;
+  }
 
-    &--reviews .slider__label--second {
-      top: -10px;
-      left: 307px;
-    }
+  .slider__toggles--reviews .slider__label--second {
+    top: -10px;
+    left: 307px;
+  }
 
-    &--reviews .slider__label--third {
-      top: -10px;
-      left: 332px;
-    }
+  .slider__toggles--reviews .slider__label--third {
+    top: -10px;
+    left: 332px;
   }
 }
 

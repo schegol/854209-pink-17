@@ -104,7 +104,7 @@ if (form) {
   });
 
   window.addEventListener("keydown", function (evt) {
-    if (evt.code === "Escape") {
+    if (evt.key === 'Escape' || evt.key === 'Esc') {
       evt.preventDefault();
       if (alertError.classList.contains("popup-alert--show") || alertSuccess.classList.contains("popup-alert--show")) {
         alertError.classList.remove("popup-alert--show");

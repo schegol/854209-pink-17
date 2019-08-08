@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js" async=""></script>
     <title>HTML Academy: Пинк</title>
@@ -211,7 +217,7 @@
                 <h3 class="user-post__author user-post__author--featured">Анна<span class="user-post__time">(5 минут назад)</span></h3>
                 <p class="user-post__description user-post__description--featured">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
                 <div class="user-post__likes-wrapper user-post__likes-wrapper--featured">
-                  <a class="user-post__like-button user-post__like-button--featured" href="#"></a>
+                  <a class="user-post__like-button user-post__like-button--featured" href="#" aria-label="Поставить лайк посту"></a>
                   <p class="user-post__likes user-post__likes--featured">
                     Нравится:
                     <span class="user-post__like-count">215</span>
@@ -235,7 +241,7 @@
                   <h3 class="user-post__author">Левон<span class="user-post__time">(5 часов назад)</span></h3>
                   <p class="user-post__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
                   <div class="user-post__likes-wrapper">
-                    <a class="user-post__like-button" href="#"></a>
+                    <a class="user-post__like-button" href="#" aria-label="Поставить лайк посту"></a>
                     <p class="user-post__likes">
                       Нравится:
                       <span class="user-post__like-count">356</span>
@@ -258,7 +264,7 @@
                   <h3 class="user-post__author">Антон<span class="user-post__time">(12 часов назад)</span></h3>
                   <p class="user-post__description">Соседи будут рады!</p>
                   <div class="user-post__likes-wrapper">
-                    <a class="user-post__like-button" href="#"></a>
+                    <a class="user-post__like-button" href="#" aria-label="Поставить лайк посту"></a>
                     <p class="user-post__likes">
                       Нравится:
                       <span class="user-post__like-count">666</span>
@@ -281,7 +287,7 @@
                   <h3 class="user-post__author">Борис<span class="user-post__time">(20 часов назад)</span></h3>
                   <p class="user-post__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
                   <div class="user-post__likes-wrapper">
-                    <a class="user-post__like-button" href="#"></a>
+                    <a class="user-post__like-button" href="#" aria-label="Поставить лайк посту"></a>
                     <p class="user-post__likes">
                       Нравится:
                       <span class="user-post__like-count">215</span>
@@ -304,7 +310,7 @@
                   <h3 class="user-post__author">Сергей<span class="user-post__time">(25 часов назад)</span></h3>
                   <p class="user-post__description">Самая кубанская в мире!</p>
                   <div class="user-post__likes-wrapper">
-                    <a class="user-post__like-button" href="#"></a>
+                    <a class="user-post__like-button" href="#" aria-label="Поставить лайк посту"></a>
                     <p class="user-post__likes">
                       Нравится:
                       <span class="user-post__like-count">4</span>
@@ -327,7 +333,7 @@
                   <h3 class="user-post__author">Максим<span class="user-post__time">(40 часов назад)</span></h3>
                   <p class="user-post__description">Где снег-то?</p>
                   <div class="user-post__likes-wrapper">
-                    <a class="user-post__like-button" href="#"></a>
+                    <a class="user-post__like-button" href="#" aria-label="Поставить лайк посту"></a>
                     <p class="user-post__likes">
                       Нравится:
                       <span class="user-post__like-count">150</span>
@@ -350,7 +356,7 @@
                   <h3 class="user-post__author">Надежда<span class="user-post__time">(45 часов назад)</span></h3>
                   <p class="user-post__description">Всем GM и взаимные лайки!</p>
                   <div class="user-post__likes-wrapper">
-                    <a class="user-post__like-button" href="#"></a>
+                    <a class="user-post__like-button" href="#" aria-label="Поставить лайк посту"></a>
                     <p class="user-post__likes">
                       Нравится:
                       <span class="user-post__like-count">2560</span>
@@ -390,21 +396,21 @@
                   </label>
                   <input class="processing-form__radio processing-form__radio--fill hidden-input" name="filter-switch" id="filter-fill" type="radio">
                   <label class="processing-form__label processing-form__label--fill" for="filter-fill">
-                    Заливка
+                    Заливка изображения
                     <svg width="48" height="48">
                       <use xlink:href="#icon-fill"></use>
                     </svg>
                   </label>
                   <input class="processing-form__radio processing-form__radio--contrast hidden-input" name="filter-switch" id="filter-contrast" type="radio">
                   <label class="processing-form__label processing-form__label--contrast" for="filter-contrast">
-                    Контраст
+                    Контраст изображения
                     <svg width="32" height="32">
                       <use xlink:href="#icon-contrast"></use>
                     </svg>
                   </label>
-                  <input class="processing-form__range processing-form__range--crop" type="range" name="filter-crop-range" min="0" max="100" step="1">
-                  <input class="processing-form__range processing-form__range--fill" type="range" name="filter-fill-range" min="0" max="100" step="1">
-                  <input class="processing-form__range processing-form__range--contrast" type="range" name="filter-contrast-range" min="0" max="100" step="1">
+                  <input class="processing-form__range processing-form__range--crop" id="crop-range" type="range" name="filter-crop-range" min="0" max="100" step="1" aria-label="Слайдер настройки обрезки изображения">
+                  <input class="processing-form__range processing-form__range--fill" id="fill-range" type="range" name="filter-fill-range" min="0" max="100" step="1" aria-label="Слайдер настройки заливки изображения">
+                  <input class="processing-form__range processing-form__range--contrast" id="contrast-range" type="range" name="filter-contrast-range" min="0" max="100" step="1" aria-label="Слайдер настройки контраста изображения">
                 </div>
               </fieldset>
               <div class="processing-form__buttons-wrapper">
