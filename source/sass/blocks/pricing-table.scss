@@ -130,12 +130,12 @@
     margin: 0 auto;
 
     transform: translateX(0);
+  }
 
-    & tr {
-      border-bottom: 2px solid #e5e5e5;
-    }
+  .pricing-table tr {
+    border-bottom: 2px solid #e5e5e5;
 
-    & tr:not(:first-of-type) {
+    &:not(:first-of-type) {
       border-top: 2px solid #e5e5e5;
     }
   }
