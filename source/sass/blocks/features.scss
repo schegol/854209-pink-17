@@ -3,11 +3,11 @@
   @include d-flex (nowrap, column, space-between, center);
 
   padding-top: 40px;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
 
   font-weight: 300;
   font-size: 24px;
-  line-height: normal;
+  line-height: 1.2;
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
   @include reset;
 
   &:last-child {
-    margin-top: 25px;
+    margin-top: 28px;
   }
 }
 
@@ -35,7 +35,7 @@
 .features__list {
   @include list-reset;
 
-  padding-top: 76px;
+  padding-top: 84px;
   padding-bottom: 290px;
 
   text-align: center;
@@ -67,8 +67,8 @@
 
 @media (min-width: $tablet-width) {
   .features__heading {
-    padding-top: 48px;
-    padding-bottom: 28px;
+    padding-top: 50px;
+    padding-bottom: 48px;
 
     font-size: 40px;
   }
@@ -92,7 +92,7 @@
 
     position: relative;
 
-    padding: 75px 20px 5px 330px;
+    padding: 72px 20px 6px 330px;
 
     text-align: left;
   }
@@ -128,8 +128,8 @@
 
 @media (min-width: $desktop-width) {
   .features__heading {
-    padding-top: 60px;
-    padding-bottom: 58px;
+    padding-top: 65px;
+    padding-bottom: 90px;
 
     font-size: 50px;
   }
@@ -151,7 +151,7 @@
   .features__list {
     flex-direction: row;
     justify-content: space-between;
-    padding: 355px 10px 20px 10px;
+    padding: 344px 10px 20px 10px;
 
     text-align: center;
   }

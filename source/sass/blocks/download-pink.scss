@@ -6,7 +6,7 @@
   max-width: 280px;
   min-height: 210px;
   margin: 0 auto;
-  padding-top: 425px;
+  padding-top: 23px;
   padding-bottom: 30px;
 
   &::after {
@@ -31,11 +31,11 @@
 }
 
 .download-pink__slogan {
-  display: none;
+  margin-bottom: 343px;
 
   font-weight: 300;
-  font-size: 40px;
-  line-height: normal;
+  font-size: 24px;
+  line-height: 1.2;
   text-align: center;
   color: #ffffff;
 }
@@ -116,7 +116,7 @@
   .download-pink__wrapper {
     max-width: 300px;
     margin: 0;
-    padding: 75px 0 108px 20px;
+    padding: 93px 0 108px 20px;
 
     &::after {
       width: 0;
@@ -130,6 +130,8 @@
     display: block;
     width: 215px;
     margin-bottom: 30px;
+
+    font-size: 40px;
   }
 
   .download-pink__general-link {
@@ -160,19 +162,19 @@
   }
 
   .download-pink__wrapper {
-    padding: 93px 0 125px 10px;
+    padding: 107px 0 123px 10px;
   }
 
   .download-pink__slogan {
     display: block;
     width: 250px;
-    margin-bottom: 45px;
+    margin-bottom: 52px;
 
     font-size: 50px;
   }
 
   .download-pink__general-link {
-    margin-bottom: 65px;
+    margin-bottom: 69px;
 
     font-size: 21px;
   }

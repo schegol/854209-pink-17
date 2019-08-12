@@ -43,7 +43,7 @@
     @include reset;
 
     width: 100%;
-    padding-top: 5px;
+    padding-top: 10px;
 
     font-size: 14px;
     line-height: 18px;
@@ -515,7 +515,7 @@
   }
 
   .contest-form__label-wrapper {
-    @include d-flex (nowrap, row, flex-start, stretch);
+    @include d-flex (wrap, row, flex-start, stretch);
   }
 
   .contest-form__contacts-area {
@@ -540,7 +540,7 @@
   .contest-form__text-area {
     max-width: 920px;
     margin: 0 auto 65px;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 42px;
   }
 

@@ -16,7 +16,7 @@
   }
 
   &::before {
-    top: 116px;
+    top: calc(50% - 90px);
     left: calc(50% - 291px);
 
     width: 177px;
@@ -30,7 +30,7 @@
   &::after {
     content: "24";
 
-    top: 138px;
+    top: calc(50% - 70px);
     left: calc(50% - 246px);
 
     width: 177px;
@@ -103,7 +103,7 @@
     background-size: 298px 345px;
 
     &::before {
-      top: 81px;
+      top: calc(50% - 130px);
       left: calc(50% - 446px);
 
       width: 220px;
@@ -114,7 +114,7 @@
     }
 
     &::after {
-      top: 107px;
+      top: calc(50% - 105px);
       left: calc(50% - 390px);
 
       font-size: 120px;

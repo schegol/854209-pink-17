@@ -15,6 +15,7 @@
   @include d-flex (wrap, row, space-between, flex-start);
 
   width: 175px;
+  margin-top: 8px;
 }
 
 .copyrights__social-link {
@@ -86,8 +87,10 @@
     top: -10px;
   }
 
-  .copyrights__social-list {
+    .copyrights__social-list {
     position: static;
+
+    margin-top: 3px;
   }
 
   .copyrights__developer-link {

@@ -1,6 +1,6 @@
 //map://
 
-var mapInteractive = document.querySelector("#map");
+var mapInteractive = document.querySelector('#map');
 if (mapInteractive) {
   ymaps.ready(function () {
       var myMap = new ymaps.Map('map', {
@@ -39,76 +39,76 @@ if (mapInteractive) {
 
 //mobile menu://
 
-var nav = document.querySelector(".main-navigation");
-var toggle = document.querySelector(".main-navigation__toggle");
-var toggleImage = document.querySelector(".main-navigation__toggle-image");
-var cross = document.querySelector(".main-navigation__toggle-image--cross");
-var burger = document.querySelector(".main-navigation__toggle-image--burger");
+var nav = document.querySelector('.main-navigation');
+var toggle = document.querySelector('.main-navigation__toggle');
+var toggleImage = document.querySelector('.main-navigation__toggle-image');
+var cross = document.querySelector('.main-navigation__toggle-image--cross');
+var burger = document.querySelector('.main-navigation__toggle-image--burger');
 
-if (nav.classList.contains("main-navigation--no-js")) {
-  nav.classList.remove("main-navigation--no-js");
-  nav.classList.add("main-navigation--closed");
-  toggle.classList.add("main-navigation__toggle--closed");
-  toggle.addEventListener("click", function (evt) {
+if (nav.classList.contains('main-navigation--no-js')) {
+  nav.classList.remove('main-navigation--no-js');
+  nav.classList.add('main-navigation--closed');
+  toggle.classList.add('main-navigation__toggle--closed');
+  toggle.addEventListener('click', function (evt) {
     evt.preventDefault();
-    nav.classList.toggle("main-navigation--closed");
-    toggle.classList.toggle("main-navigation__toggle--closed");
+    nav.classList.toggle('main-navigation--closed');
+    toggle.classList.toggle('main-navigation__toggle--closed');
   });
 };
 
 //pricing slider://
 
-var table = document.querySelector(".pricing-table");
-var tableRadio1 = document.getElementById("first-column");
-var tableRadio2 = document.getElementById("second-column");
-var tableRadio3 = document.getElementById("third-column");
+var table = document.querySelector('.pricing-table');
+var tableRadio1 = document.getElementById('first-column');
+var tableRadio2 = document.getElementById('second-column');
+var tableRadio3 = document.getElementById('third-column');
 
 if (table) {
-  tableRadio1.addEventListener("click", function (evt) {
-    table.classList.add("pricing-table--first-column");
-    table.classList.remove("pricing-table--third-column");
+  tableRadio1.addEventListener('click', function (evt) {
+    table.classList.add('pricing-table--first-column');
+    table.classList.remove('pricing-table--third-column');
   });
-  tableRadio2.addEventListener("click", function (evt) {
-    table.classList.remove("pricing-table--first-column");
-    table.classList.remove("pricing-table--third-column");
+  tableRadio2.addEventListener('click', function (evt) {
+    table.classList.remove('pricing-table--first-column');
+    table.classList.remove('pricing-table--third-column');
   });
-  tableRadio3.addEventListener("click", function (evt) {
-    table.classList.remove("pricing-table--first-column");
-    table.classList.add("pricing-table--third-column");
+  tableRadio3.addEventListener('click', function (evt) {
+    table.classList.remove('pricing-table--first-column');
+    table.classList.add('pricing-table--third-column');
   });
 };
 
 //form popups://
 
-var form = document.querySelector(".contest-form");
+var form = document.querySelector('.contest-form');
 
 if (form) {
-  var formSubmit = document.querySelector(".contest-form__submit");
-  var formName = document.querySelector("#name");
-  var formSurname = document.querySelector("#surname");
-  var formEmail = document.querySelector("#email");
-  var alertError = document.querySelector(".popup-alert--error");
-  var alertSuccess = document.querySelector(".popup-alert--success");
-  var closeButtons = document.querySelectorAll(".popup-alert__button");
+  var formSubmit = document.querySelector('.contest-form__submit');
+  var formName = document.querySelector('#name');
+  var formSurname = document.querySelector('#surname');
+  var formEmail = document.querySelector('#email');
+  var alertError = document.querySelector('.popup-alert--error');
+  var alertSuccess = document.querySelector('.popup-alert--success');
+  var closeButtons = document.querySelectorAll('.popup-alert__button');
 
-  form.addEventListener("submit", function (evt) {
+  form.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    form.checkValidity() ? alertSuccess.classList.add("popup-alert--show") : alertError.classList.add("popup-alert--show");
+    form.checkValidity() ? alertSuccess.classList.add('popup-alert--show') : alertError.classList.add('popup-alert--show');
   });
 
   [].forEach.call(closeButtons, function(button) {
-    button.addEventListener("click", function() {
-      alertSuccess.classList.contains("popup-alert--show") && alertSuccess.classList.remove("popup-alert--show");
-      alertError.classList.contains("popup-alert--show") && alertError.classList.remove("popup-alert--show");
+    button.addEventListener('click', function() {
+      alertSuccess.classList.contains('popup-alert--show') && alertSuccess.classList.remove('popup-alert--show');
+      alertError.classList.contains('popup-alert--show') && alertError.classList.remove('popup-alert--show');
     })
   });
 
-  window.addEventListener("keydown", function (evt) {
+  window.addEventListener('keydown', function (evt) {
     if (evt.key === 'Escape' || evt.key === 'Esc') {
       evt.preventDefault();
-      if (alertError.classList.contains("popup-alert--show") || alertSuccess.classList.contains("popup-alert--show")) {
-        alertError.classList.remove("popup-alert--show");
-        alertSuccess.classList.remove("popup-alert--show");
+      if (alertError.classList.contains('popup-alert--show') || alertSuccess.classList.contains('popup-alert--show')) {
+        alertError.classList.remove('popup-alert--show');
+        alertSuccess.classList.remove('popup-alert--show');
       }
     }
   });

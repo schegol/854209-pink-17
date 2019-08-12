@@ -2,7 +2,7 @@
   background-color: #1d2631;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center bottom -220px;
+  background-position: center bottom -223px;
 
   &--index {
     background-position: center bottom 273px;
@@ -19,7 +19,7 @@
 }
 
 .page-header__heading-wrapper {
-  min-height: 172px;
+  min-height: 170px;
 }
 
 .page-header__heading {
@@ -31,7 +31,7 @@
 
   font-weight: 300;
   font-size: 24px;
-  line-height: normal;
+  line-height: 1.2;
   text-align: center;
   color: #ffffff;
 }
@@ -56,7 +56,7 @@
   }
 
   .page-header__heading {
-    padding-top: 65px;
+    padding-top: 68px;
 
     font-size: 50px;
   }
