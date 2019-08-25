@@ -91,6 +91,7 @@ if (form) {
   var alertSuccess = document.querySelector('.popup-alert--success');
   var closeButtons = document.querySelectorAll('.popup-alert__button');
 
+  form.setAttribute('novalidate', '0');
   form.addEventListener('submit', function (evt) {
     evt.preventDefault();
     form.checkValidity() ? alertSuccess.classList.add('popup-alert--show') : alertError.classList.add('popup-alert--show');

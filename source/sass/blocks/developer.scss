@@ -1,7 +1,7 @@
 .developer {
   @include d-flex (nowrap, row, space-between, center);
 
-  width: 130px;
+  width: 100px;
 }
 
 .developer__name {
@@ -23,7 +23,7 @@
 
 @media (min-width: $desktop-width) {
   .developer {
-    width: 150px;
+    width: 120px;
   }
 
   .developer__name {
