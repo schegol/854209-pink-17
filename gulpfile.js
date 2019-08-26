@@ -93,7 +93,8 @@ gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/*.webp",
-    "source/js/picturefill.min.js"
+    "source/js/picturefill.min.js",
+    "source/favicon/*"
   ], {
     base: "source"
   })
