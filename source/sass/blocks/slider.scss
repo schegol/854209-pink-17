@@ -29,8 +29,16 @@
 }
 
 .slider__item {
+  opacity: 1;
+
+  transition: opacity .5s linear;
+
   &--hidden {
-    display: none;
+    position: absolute;
+
+    left: -3000%;
+
+    opacity: 0;
   }
 }
 

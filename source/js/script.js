@@ -56,14 +56,87 @@ if (nav.classList.contains('main-navigation--no-js')) {
   });
 };
 
+//reviews slider://
+
+var slider = document.querySelector('.reviews__list');
+
+if (slider) {
+  var slides = document.querySelectorAll('.reviews__item');
+  var leftArrow = document.querySelector('.slider__arrow--left');
+  var rightArrow = document.querySelector('.slider__arrow--right');
+  var radioButtons = document.getElementsByName('review-toggle');
+  var currentSlide = 0;
+  var currentRadio = 0;
+
+  var hideAllSlides = function () {
+    slides.forEach(function (slide) {
+      slide.classList.add('slider__item--hidden');
+    });
+  }
+
+  radioButtons.forEach(function (radio, i) {
+    if (radio.checked) {
+      slides[i].classList.remove('slider__item--hidden');
+    }
+
+    radio.addEventListener('change', function () {
+      hideAllSlides();
+      slides[i].classList.remove('slider__item--hidden');
+    });
+  });
+
+
+
+  leftArrow.onclick = function() {
+    prev();
+  };
+
+  rightArrow.onclick = function() {
+    next();
+  };
+
+  function prev() {
+    if (currentSlide == 0 || currentRadio == 0) {
+      currentSlide = slides.length - 1;
+      currentRadio = radioButtons.length - 1;
+    } else {
+      currentSlide--;
+      currentRadio--;
+    }
+
+    hideAllSlides();
+    slides[currentSlide].classList.remove('slider__item--hidden');
+
+    document.querySelector('input[name=review-toggle]:checked').removeAttribute('checked', 'checked');
+    radioButtons[currentRadio].setAttribute('checked', 'checked');
+  };
+
+  function next() {
+    if (currentSlide == slides.length - 1 || currentRadio == radioButtons.length - 1) {
+      currentSlide = 0;
+      currentRadio = 0;
+    } else {
+      currentSlide++;
+      currentRadio++;
+    }
+
+    hideAllSlides();
+    slides[currentSlide].classList.remove('slider__item--hidden');
+
+    document.querySelector('input[name=review-toggle]:checked').removeAttribute('checked', 'checked');
+    radioButtons[currentRadio].setAttribute('checked', 'checked');
+  };
+};
+
 //pricing slider://
 
 var table = document.querySelector('.pricing-table');
-var tableRadio1 = document.getElementById('first-column');
-var tableRadio2 = document.getElementById('second-column');
-var tableRadio3 = document.getElementById('third-column');
 
 if (table) {
+  var tableRadio1 = document.getElementById('first-column');
+  var tableRadio2 = document.getElementById('second-column');
+  var tableRadio3 = document.getElementById('third-column');
+
   tableRadio1.addEventListener('click', function (evt) {
     table.classList.add('pricing-table--first-column');
     table.classList.remove('pricing-table--third-column');
