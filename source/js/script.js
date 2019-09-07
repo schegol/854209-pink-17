@@ -77,11 +77,15 @@ if (slider) {
   radioButtons.forEach(function (radio, i) {
     if (radio.checked) {
       slides[i].classList.remove('slider__item--hidden');
+      document.querySelector('input[name=review-toggle]:checked').checked = false;
+      radioButtons[i].checked = true;
     }
 
     radio.addEventListener('change', function () {
       hideAllSlides();
       slides[i].classList.remove('slider__item--hidden');
+      document.querySelector('input[name=review-toggle]:checked').checked = false;
+      radioButtons[i].checked = true;
     });
   });
 
@@ -102,13 +106,13 @@ if (slider) {
     } else {
       currentSlide--;
       currentRadio--;
-    }
+    };
 
     hideAllSlides();
     slides[currentSlide].classList.remove('slider__item--hidden');
 
-    document.querySelector('input[name=review-toggle]:checked').removeAttribute('checked', 'checked');
-    radioButtons[currentRadio].setAttribute('checked', 'checked');
+    document.querySelector('input[name=review-toggle]:checked').checked = false;
+    radioButtons[currentRadio].checked = true;
   };
 
   function next() {
@@ -118,13 +122,13 @@ if (slider) {
     } else {
       currentSlide++;
       currentRadio++;
-    }
+    };
 
     hideAllSlides();
     slides[currentSlide].classList.remove('slider__item--hidden');
 
-    document.querySelector('input[name=review-toggle]:checked').removeAttribute('checked', 'checked');
-    radioButtons[currentRadio].setAttribute('checked', 'checked');
+    document.querySelector('input[name=review-toggle]:checked').checked = false;
+    radioButtons[currentRadio].checked = true;
   };
 };
 
