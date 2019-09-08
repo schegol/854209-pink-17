@@ -72,7 +72,7 @@ if (slider) {
     slides.forEach(function (slide) {
       slide.classList.add('slider__item--hidden');
     });
-  }
+  };
 
   radioButtons.forEach(function (radio, i) {
     if (radio.checked) {
@@ -174,7 +174,7 @@ if (form) {
     form.checkValidity() ? alertSuccess.classList.add('popup-alert--show') : alertError.classList.add('popup-alert--show');
   });
 
-  [].forEach.call(closeButtons, function(button) {
+  [].forEach.call(closeButtons, function (button) {
     button.addEventListener('click', function() {
       alertSuccess.classList.contains('popup-alert--show') && alertSuccess.classList.remove('popup-alert--show');
       alertError.classList.contains('popup-alert--show') && alertError.classList.remove('popup-alert--show');
